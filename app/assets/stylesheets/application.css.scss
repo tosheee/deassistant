@@ -1,3 +1,25 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "static_pages";
+body{
+ background-color: #1dd7da;
+ .wrapper{
+    width: 98%;
+    margin: 0 auto;
+    background-color: #49daba;
+   #top-messages{
+    text-align: center;
+   }
+    main{
 
+
+       .form-user{
+         margin: 0 auto;
+         padding: 20px;
+         width: 400px;
+         border-radius: 10px;
+       }
+
+    }
+ }
+}
