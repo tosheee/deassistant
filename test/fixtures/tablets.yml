@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  seria: MyString
+  model: MyString
+  connection: MyString
+  storage: MyString
+  color: MyString
+  aen: MyString
+  partnumber: MyString
+
+two:
+  brand: MyString
+  seria: MyString
+  model: MyString
+  connection: MyString
+  storage: MyString
+  color: MyString
+  aen: MyString
+  partnumber: MyString

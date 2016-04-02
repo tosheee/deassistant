@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @tablet.brand %>
+</p>
+
+<p>
+  <strong>Seria:</strong>
+  <%= @tablet.seria %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @tablet.model %>
+</p>
+
+<p>
+  <strong>Connection:</strong>
+  <%= @tablet.connection %>
+</p>
+
+<p>
+  <strong>Storage:</strong>
+  <%= @tablet.storage %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @tablet.color %>
+</p>
+
+<p>
+  <strong>Aen:</strong>
+  <%= @tablet.aen %>
+</p>
+
+<p>
+  <strong>Partnumber:</strong>
+  <%= @tablet.partnumber %>
+</p>
+
+<%= link_to 'Edit', edit_tablet_path(@tablet) %> |
+<%= link_to 'Back', tablets_path %>

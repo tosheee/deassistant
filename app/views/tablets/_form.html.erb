@@ -1,0 +1,49 @@
+<%= form_for(@tablet) do |f| %>
+  <% if @tablet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tablet.errors.count, "error") %> prohibited this tablet from being saved:</h2>
+
+      <ul>
+      <% @tablet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :brand %><br>
+    <%= f.text_field :brand %>
+  </div>
+  <div class="field">
+    <%= f.label :seria %><br>
+    <%= f.text_field :seria %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :connection %><br>
+    <%= f.text_field :connection %>
+  </div>
+  <div class="field">
+    <%= f.label :storage %><br>
+    <%= f.text_field :storage %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :aen %><br>
+    <%= f.text_field :aen %>
+  </div>
+  <div class="field">
+    <%= f.label :partnumber %><br>
+    <%= f.text_field :partnumber %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

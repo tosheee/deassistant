@@ -13,6 +13,7 @@ gem 'bootstrap-sass', '3.2.0.2'
 gem 'autoprefixer-rails', '~>6.3', '>=6.3.1'
 
 gem 'devise', '~> 3.5', '>= 3.5.6'
+gem 'zeroclipboard-rails'
 
 group :development, :test do
   gem 'sqlite3'
