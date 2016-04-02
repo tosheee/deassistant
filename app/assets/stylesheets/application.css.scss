@@ -1,17 +1,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "static_pages";
+@import "tablets";
+
+
 body{
- background-color: #1dd7da;
+
  .wrapper{
-    width: 98%;
-    margin: 0 auto;
-    background-color: #49daba;
+
+   .navbar.navbar-inverse{
+     border-radius: 0;
+   }
    #top-messages{
     text-align: center;
    }
     main{
-
+      width: 98%;
+      margin: 0 auto;
 
        .form-user{
          margin: 0 auto;

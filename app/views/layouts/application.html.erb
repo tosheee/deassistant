@@ -11,10 +11,12 @@
   <header>
     <%= render 'shared/navbar'%>
   </header>
+  <% unless notice.nil? || alert.nil? %>
   <div id="top-messages">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
   </div>
+      <% end %>
 
   <main>
     <%= yield %>
