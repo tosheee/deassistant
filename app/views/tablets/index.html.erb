@@ -1,4 +1,4 @@
-<p>
+<div class="search-form">
 <%= form_tag tablets_path, :method => 'get' do %>
       <%= text_field_tag :search, params[:search], placeholder: 'Search for...'%>
       <%= submit_tag "Search", class: 'btn btn-default SearchButton' %>
@@ -6,7 +6,7 @@
   Listing Tablets
   <%= link_to 'New Tablet', new_tablet_path %>
 
-</p>
+</div>
 
 
 <div class="table-form">

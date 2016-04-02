@@ -1,5 +1,10 @@
-p{
+.search-form{
   text-align: center;
+  input[type = text]{
+    width: 400px;
+    height: 37px;
+    border-radius: 6px;
+  }
 }
 .table-form{
   margin: 0 auto;
