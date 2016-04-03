@@ -15,6 +15,15 @@ gem 'autoprefixer-rails', '~>6.3', '>=6.3.1'
 gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'zeroclipboard-rails'
 
+
+gem 'sunspot_rails'
+gem 'progress_bar'
+
+group :development do
+  gem 'sunspot_solr'
+end
+
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
