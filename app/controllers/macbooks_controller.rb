@@ -4,8 +4,7 @@ class MacbooksController < ApplicationController
   # GET /macbooks
   # GET /macbooks.json
   def index
-    pn_search = params[:search]
-    @macbooks = Macbook.where(["pn LIKE ?", "%#{pn_search.strip}%"])
+    @macbooks = Macbook.where(["pn LIKE ?", "%#{params[:search]}%"])
   end
 
   # GET /macbooks/1
