@@ -1,0 +1,67 @@
+<div class="search-form">
+  <%= form_tag macbooks_path, :method => 'get' do %>
+      <%= text_field_tag :search, params[:search], placeholder: 'Search for...'%>
+      <%= submit_tag "Search", class: 'btn btn-default SearchButton' %>
+  <% end %>
+  Listing Tablets
+  <%= link_to 'New Macbook', new_macbook_path %>
+
+</div>
+
+
+<div class="table-form">
+  <% unless notice.nil? %>
+      <p id="notice"><%= notice %></p>
+  <% end %>
+  <br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Seria</th>
+      <th>Model</th>
+      <th>Pn</th>
+      <th>Cpu brand</th>
+      <th>Cpu seria</th>
+      <th>Cpu model</th>
+      <th>Ram</th>
+      <th>Storage</th>
+      <th>Video brand</th>
+      <th>Video model</th>
+      <th>Display</th>
+      <th>Touchscreen</th>
+      <th>Os</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @macbooks.each do |macbook| %>
+      <tr>
+        <td><%= macbook.brand %></td>
+        <td><%= macbook.seria %></td>
+        <td><%= macbook.model %></td>
+        <td><%= macbook.pn %></td>
+        <td><%= macbook.cpu_brand %></td>
+        <td><%= macbook.cpu_seria %></td>
+        <td><%= macbook.cpu_model %></td>
+        <td><%= macbook.ram %></td>
+        <td><%= macbook.storage %></td>
+        <td><%= macbook.video_brand %></td>
+        <td><%= macbook.video_model %></td>
+        <td><%= macbook.display %></td>
+        <td><%= macbook.touchscreen %></td>
+        <td><%= macbook.os %></td>
+        <td><%= link_to 'Show', macbook %></td>
+        <td><%= link_to 'Edit', edit_macbook_path(macbook) %></td>
+        <td><%= link_to 'Destroy', macbook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>

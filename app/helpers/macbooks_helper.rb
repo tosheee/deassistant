@@ -1,0 +1,2 @@
+module MacbooksHelper
+end

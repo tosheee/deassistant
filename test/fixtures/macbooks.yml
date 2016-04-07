@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  seria: MyString
+  model: MyString
+  pn: MyString
+  cpu_brand: MyString
+  cpu_seria: MyString
+  cpu_model: MyString
+  ram: MyString
+  storage: MyString
+  video_brand: MyString
+  video_model: MyString
+  display: MyString
+  touchscreen: MyString
+  os: MyString
+
+two:
+  brand: MyString
+  seria: MyString
+  model: MyString
+  pn: MyString
+  cpu_brand: MyString
+  cpu_seria: MyString
+  cpu_model: MyString
+  ram: MyString
+  storage: MyString
+  video_brand: MyString
+  video_model: MyString
+  display: MyString
+  touchscreen: MyString
+  os: MyString

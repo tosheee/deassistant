@@ -11,7 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160402063258) do
+ActiveRecord::Schema.define(version: 20160407222726) do
+
+  create_table "macbooks", force: :cascade do |t|
+    t.string   "brand"
+    t.string   "seria"
+    t.string   "model"
+    t.string   "pn"
+    t.string   "cpu_brand"
+    t.string   "cpu_seria"
+    t.string   "cpu_model"
+    t.string   "ram"
+    t.string   "storage"
+    t.string   "video_brand"
+    t.string   "video_model"
+    t.string   "display"
+    t.string   "touchscreen"
+    t.string   "os"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string   "brand"
+    t.string   "seria"
+    t.string   "model"
+    t.string   "connection"
+    t.string   "storage"
+    t.string   "color"
+    t.string   "aen"
+    t.string   "partnumber"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tablets", force: :cascade do |t|
     t.string   "brand"
