@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160407222726) do
+ActiveRecord::Schema.define(version: 20160409085525) do
 
   create_table "macbooks", force: :cascade do |t|
     t.string   "brand"
     t.string   "seria"
     t.string   "model"
     t.string   "pn"
+    t.string   "ean"
     t.string   "cpu_brand"
     t.string   "cpu_seria"
     t.string   "cpu_model"
@@ -26,10 +27,11 @@ ActiveRecord::Schema.define(version: 20160407222726) do
     t.string   "video_brand"
     t.string   "video_model"
     t.string   "display"
-    t.string   "touchscreen"
+    t.string   "resolution"
+    t.string   "touch_screan"
     t.string   "os"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "searches", force: :cascade do |t|

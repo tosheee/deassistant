@@ -5,6 +5,7 @@ one:
   seria: MyString
   model: MyString
   pn: MyString
+  ean: MyString
   cpu_brand: MyString
   cpu_seria: MyString
   cpu_model: MyString
@@ -13,7 +14,8 @@ one:
   video_brand: MyString
   video_model: MyString
   display: MyString
-  touchscreen: MyString
+  resolution: MyString
+  touch_screan: MyString
   os: MyString
 
 two:
@@ -21,6 +23,7 @@ two:
   seria: MyString
   model: MyString
   pn: MyString
+  ean: MyString
   cpu_brand: MyString
   cpu_seria: MyString
   cpu_model: MyString
@@ -29,5 +32,6 @@ two:
   video_brand: MyString
   video_model: MyString
   display: MyString
-  touchscreen: MyString
+  resolution: MyString
+  touch_screan: MyString
   os: MyString

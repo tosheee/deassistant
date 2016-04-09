@@ -1,10 +1,11 @@
 <div class="search-form">
-  <%= form_tag macbooks_path, :method => 'get' do %>
+  <%= form_tag tablets_path, :method => 'get' do %>
       <%= text_field_tag :search, params[:search], placeholder: 'Search for...'%>
       <%= submit_tag "Search", class: 'btn btn-default SearchButton' %>
   <% end %>
   Listing Tablets
   <%= link_to 'New Macbook', new_macbook_path %>
+
 
 </div>
 
@@ -15,6 +16,8 @@
   <% end %>
   <br>
 
+<h1>Listing Macbooks</h1>
+
 <table>
   <thead>
     <tr>
@@ -22,6 +25,7 @@
       <th>Seria</th>
       <th>Model</th>
       <th>Pn</th>
+      <th>Ean</th>
       <th>Cpu brand</th>
       <th>Cpu seria</th>
       <th>Cpu model</th>
@@ -30,7 +34,8 @@
       <th>Video brand</th>
       <th>Video model</th>
       <th>Display</th>
-      <th>Touchscreen</th>
+      <th>Resolution</th>
+      <th>Touch screan</th>
       <th>Os</th>
       <th>Show</th>
       <th>Edit</th>
@@ -45,6 +50,7 @@
         <td><%= macbook.seria %></td>
         <td><%= macbook.model %></td>
         <td><%= macbook.pn %></td>
+        <td><%= macbook.ean %></td>
         <td><%= macbook.cpu_brand %></td>
         <td><%= macbook.cpu_seria %></td>
         <td><%= macbook.cpu_model %></td>
@@ -53,7 +59,8 @@
         <td><%= macbook.video_brand %></td>
         <td><%= macbook.video_model %></td>
         <td><%= macbook.display %></td>
-        <td><%= macbook.touchscreen %></td>
+        <td><%= macbook.resolution %></td>
+        <td><%= macbook.touch_screan %></td>
         <td><%= macbook.os %></td>
         <td><%= link_to 'Show', macbook %></td>
         <td><%= link_to 'Edit', edit_macbook_path(macbook) %></td>

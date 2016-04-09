@@ -4,7 +4,7 @@ class MacbooksController < ApplicationController
   # GET /macbooks
   # GET /macbooks.json
   def index
-    @macbooks = Macbook.where(["pn LIKE ?", "%#{params[:search]}%"])
+    @macbooks = Macbook.all
   end
 
   # GET /macbooks/1
@@ -69,6 +69,6 @@ class MacbooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def macbook_params
-      params.require(:macbook).permit(:brand, :seria, :model, :pn, :cpu_brand, :cpu_seria, :cpu_model, :ram, :storage, :video_brand, :video_model, :display, :touchscreen, :os)
+      params.require(:macbook).permit(:brand, :seria, :model, :pn, :ean, :cpu_brand, :cpu_seria, :cpu_model, :ram, :storage, :video_brand, :video_model, :display, :resolution, :touch_screan, :os)
     end
 end
