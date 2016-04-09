@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :apple_macbooks
   resources :macbooks
   resources :tablets
   devise_for :users

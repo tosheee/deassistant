@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Apple Macbooks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Seria</th>
+      <th>Model</th>
+      <th>Pn</th>
+      <th>Ean</th>
+      <th>Cpu brand</th>
+      <th>Cpu seria</th>
+      <th>Cpu model</th>
+      <th>Ram</th>
+      <th>Storage</th>
+      <th>Video brand</th>
+      <th>Video model</th>
+      <th>Display</th>
+      <th>Resolution</th>
+      <th>Touch screen</th>
+      <th>Os</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apple_macbooks.each do |apple_macbook| %>
+      <tr>
+        <td><%= apple_macbook.brand %></td>
+        <td><%= apple_macbook.seria %></td>
+        <td><%= apple_macbook.model %></td>
+        <td><%= apple_macbook.pn %></td>
+        <td><%= apple_macbook.ean %></td>
+        <td><%= apple_macbook.cpu_brand %></td>
+        <td><%= apple_macbook.cpu_seria %></td>
+        <td><%= apple_macbook.cpu_model %></td>
+        <td><%= apple_macbook.ram %></td>
+        <td><%= apple_macbook.storage %></td>
+        <td><%= apple_macbook.video_brand %></td>
+        <td><%= apple_macbook.video_model %></td>
+        <td><%= apple_macbook.display %></td>
+        <td><%= apple_macbook.resolution %></td>
+        <td><%= apple_macbook.touch_screen %></td>
+        <td><%= apple_macbook.os %></td>
+        <td><%= link_to 'Show', apple_macbook %></td>
+        <td><%= link_to 'Edit', edit_apple_macbook_path(apple_macbook) %></td>
+        <td><%= link_to 'Destroy', apple_macbook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apple macbook', new_apple_macbook_path %>
