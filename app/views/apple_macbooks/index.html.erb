@@ -1,6 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="search-form">
+  <%= form_tag tablets_path, :method => 'get' do %>
+      <%= text_field_tag :search, params[:search], placeholder: 'Search for...'%>
+      <%= submit_tag "Search", class: 'btn btn-default SearchButton' %>
+  <% end %>
+  Listing Macbook
+  <%= link_to 'New Apple macbook', new_apple_macbook_path %>
+</div>
 
-<h1>Listing Apple Macbooks</h1>
+<div class="table-form">
+  <% unless notice.nil? %>
+      <p id="notice"><%= notice %></p>
+  <% end %>
+  <br>
+
 
 <table>
   <thead>
@@ -21,7 +33,9 @@
       <th>Resolution</th>
       <th>Touch screen</th>
       <th>Os</th>
-      <th colspan="3"></th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
     </tr>
   </thead>
 
@@ -53,5 +67,5 @@
 </table>
 
 <br>
+</div>
 
-<%= link_to 'New Apple macbook', new_apple_macbook_path %>
