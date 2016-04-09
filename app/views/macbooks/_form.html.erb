@@ -1,5 +1,3 @@
-<div class='form-user'>
-
 <%= form_for(@macbook) do |f| %>
   <% if @macbook.errors.any? %>
     <div id="error_explanation">
@@ -14,71 +12,70 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_field :brand, class: "form-control", placeholder: "Brand" %>
+    <%= f.label :brand %><br>
+    <%= f.text_field :brand %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :seria, class: "form-control", placeholder: "Seria" %>
+    <%= f.label :seria %><br>
+    <%= f.text_field :seria %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :model, class: "form-control", placeholder: "Model" %>
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :pn, class: "form-control", placeholder: "Part number:" %>
+    <%= f.label :pn %><br>
+    <%= f.text_field :pn %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :ean, class: "form-control", placeholder: "EAN:" %>
+    <%= f.label :ean %><br>
+    <%= f.text_field :ean %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :cpu_brand, class: "form-control", placeholder: "Cpu brand" %>
+    <%= f.label :cpu_brand %><br>
+    <%= f.text_field :cpu_brand %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :cpu_seria, class: "form-control", placeholder: "Cpu seria" %>
+    <%= f.label :cpu_seria %><br>
+    <%= f.text_field :cpu_seria %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :cpu_model, class: "form-control", placeholder: "Cpu model" %>
+    <%= f.label :cpu_model %><br>
+    <%= f.text_field :cpu_model %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :ram, class: "form-control", placeholder: "Ram" %>
+    <%= f.label :ram %><br>
+    <%= f.text_field :ram %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :storage, class: "form-control", placeholder: "Storage" %>
+    <%= f.label :storage %><br>
+    <%= f.text_field :storage %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :video_brand, class: "form-control", placeholder: "Video brand" %>
+    <%= f.label :video_brand %><br>
+    <%= f.text_field :video_brand %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :video_model, class: "form-control", placeholder: "Video model" %>
+    <%= f.label :video_model %><br>
+    <%= f.text_field :video_model %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :display, class: "form-control", placeholder: "Display" %>
+    <%= f.label :display %><br>
+    <%= f.text_field :display %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :resolution, class: "form-control", placeholder: "Resolution" %>
+    <%= f.label :resolution %><br>
+    <%= f.text_field :resolution %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :touch_screan, class: "form-control", placeholder: "Touch screan" %>
+    <%= f.label :touch_screan %><br>
+    <%= f.text_field :touch_screan %>
   </div>
-    <br>
   <div class="field">
-    <%= f.text_field :os, class: "form-control", placeholder: "OS" %>
+    <%= f.label :os %><br>
+    <%= f.text_field :os %>
   </div>
-    <br>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
-</div>
