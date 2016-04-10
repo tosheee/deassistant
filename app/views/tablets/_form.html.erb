@@ -12,35 +12,37 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_field :brand, class: "form-control", placeholder: "Brand" %>
+    <%= f.select :brand, [["Apple"]], {}, {class: "form-control"} %>
   </div>
     <br>
   <div class="field">
-    <%= f.text_field :seria, class: "form-control", placeholder: "Brand" %>
+    <%= f.select :seria, [["iPad"]], {}, {class: "form-control"} %>
   </div>
     <br>
   <div class="field">
-    <%= f.text_field :model, class: "form-control", placeholder: "Brand" %>
+    <%= f.select(:model, [[''], ['Air'], ['Air 2'], ['Mini'], ['Mini 2'], ['Mini 3'], ['Mini 4'], ['Pro'], ['Pro 9.7']], {:prompt => 'Select iPad Model'}, {class: "form-control"}) %>
   </div>
     <br>
   <div class="field">
-    <%= f.text_field :connection, class: "form-control", placeholder: "Brand" %>
+    <%= f.select :connection, [["Wi-Fi"], ["Wi-Fi+Cell"]], {:prompt => 'Select Connection'}, {class: "form-control"} %>
+    <%= f.text_field :connection, class: "form-control", placeholder: "Connection" %>
   </div>
     <br>
   <div class="field">
-    <%= f.text_field :storage, class: "form-control", placeholder: "Brand" %>
+    <%= f.select(:model, [[''], ['16 Gb'], ['32 Gb'], ['64 Gb'], ['128 Gb'], ['256 Gb']], {:prompt => 'Select Storage'}, {class: "form-control"}) %>
+    <%= f.text_field :storage, class: "form-control", placeholder: "Storage" %>
   </div>
     <br>
   <div class="field">
-    <%= f.text_field :color, class: "form-control", placeholder: "Brand" %>
+    <%= f.select(:color, [[''],['Silver'], ['Gold'],['Rose Gold'], ['Space Grey']], {:prompt => 'Select Color'}, {class: "form-control"}) %>
   </div>
     <br>
     <div class="field">
-    <%= f.text_field :aen, class: "form-control", placeholder: "Brand" %>
+    <%= f.text_field :aen, class: "form-control", placeholder: "EAN:" %>
   </div>
     <br>
   <div class="field">
-    <%= f.text_field :partnumber, class: "form-control", placeholder: "Brand" %>
+    <%= f.text_field :partnumber, class: "form-control", placeholder: "Part Number:" %>
   </div>
   <div class="actions">
     <%= f.submit %>
