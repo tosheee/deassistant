@@ -1,11 +1,15 @@
 class TabletsController < ApplicationController
   before_action :set_tablet, only: [:show, :edit, :update, :destroy]
 
+  # GET /tablets
+  # GET /tablets.json
   def index
     @tablets = Tablet.where(["brand LIKE ?", "%#{params[:search]}%"])
     #@tablets = Tablet.all
   end
 
+  # GET /tablets/1
+  # GET /tablets/1.json
   def show
   end
 
