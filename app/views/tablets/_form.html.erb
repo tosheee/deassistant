@@ -24,13 +24,12 @@
   </div>
     <br>
   <div class="field">
-    <%= f.select :connection, [["Wi-Fi"], ["Wi-Fi+Cell"]], {:prompt => 'Select Connection'}, {class: "form-control"} %>
-    <%= f.text_field :connection, class: "form-control", placeholder: "Connection" %>
+    <%= f.select :connection, [[''], ["Wi-Fi"], ["Wi-Fi+Cell"]], {:prompt => 'Select Connection'}, {class: "form-control"} %>
   </div>
+
     <br>
   <div class="field">
-    <%= f.select(:model, [[''], ['16 Gb'], ['32 Gb'], ['64 Gb'], ['128 Gb'], ['256 Gb']], {:prompt => 'Select Storage'}, {class: "form-control"}) %>
-    <%= f.text_field :storage, class: "form-control", placeholder: "Storage" %>
+    <%= f.select(:storage, [[''], ['16 Gb'], ['32 Gb'], ['64 Gb'], ['128 Gb'], ['256 Gb']], {:prompt => 'Select Storage'}, {class: "form-control"}) %>
   </div>
     <br>
   <div class="field">
