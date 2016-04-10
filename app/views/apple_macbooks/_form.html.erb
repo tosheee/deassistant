@@ -14,70 +14,82 @@
     <div class="field">
       <%= f.select :brand, [["Apple"]], {}, {class: "form-control"} %>
     </div>
+
     <br>
     <div class="field">
       <%= f.select :seria, [["Macbook"]], {}, {class: "form-control"} %>
     </div>
+
     <br>
     <div class="field">
       <%= f.select(:model, [[''], ['Air'], ['Pro'], ['White']], {:prompt => 'Select Macbook Model'}, {class: "form-control"}) %>
     </div>
+
     <br>
     <div class="field">
       <%= f.text_field :pn, class: "form-control", placeholder: "Part number:" %>
     </div>
+
     <br>
     <div class="field">
-      <br>
       <%= f.text_field :ean, class: "form-control", placeholder: "EAN:" %>
     </div>
+
     <br>
     <div class="field">
       <%= f.select(:cpu_brand, [[''], ['Intel'], ['AMD']], {:prompt => 'Select Cpu'}, {class: "form-control"}) %>
     </div>
+
     <br>
     <div class="field">
       <%= f.select(:cpu_seria, [[''], ['Core M 1.1GHz'], ['Core M 1.2GHz'], ['Core i3'], ['Core i5 1.3GHz'], ['Core i5 1.4GHz'], ['Core i5 1.6GHz'], ['Core i5 2.4GHz Haswell'], ['Core i5 2.5GHz'], ['Core i5 2.6GHz'], ['Core i5 2.7GHz Broadwell'], ['Core i5 2.8GHz'], ['Core i5 2.9GHz'], ['Core i7 1.8GHz'], ['Core i7 2.2GHz'], ['Core i7 2.2GHz Broadwell'], ['Core i7 2.5GHz Haswell']], {:prompt => 'Select Cpu seria'}, {class: "form-control"}) %>
       <%= f.text_field :cpu_seria, class: "form-control", placeholder: "Cpu seria" %>
     </div>
+
     <br>
     <div class="field">
-      <%= f.select(:cpu_model, [[''], ['Intel'], ['AMD']], {:prompt => 'Select Cpu'}, {class: "form-control"}) %>
       <%= f.text_field :cpu_model, class: "form-control", placeholder: "Cpu model" %>
     </div>
+
     <br>
     <div class="field">
       <%= f.select(:ram, [[''], ['1024'], ['2048'], ['3072'], ['4096'], ['5120'], ['6144'], ['7168'], ['8192'], ['9216'], ['10240'], ['11264'], ['12288'], ['14336'], ['16384'], ['20480'], ['24576'],['32768']], {:prompt => 'Select Ram'}, {class: "form-control"})%>
       <%= f.text_field :ram, class: "form-control", placeholder: "Ram" %>
     </div>
+
     <br>
     <div class="field">
       <%= f.select(:storage, [[''], ['128Gb'], ['256Gb'], ['500Gb'], ['512Gb'],['1000Gb'],['1024Gb'] ], {:prompt => 'Select storage'}, {class: "form-control"}) %>
       <%= f.text_field :storage, class: "form-control", placeholder: "Storage" %>
     </div>
+
     <br>
     <div class="field">
-      <br>
       <%= f.select(:video_brand, [[''],['Intel'], ['AMD'], ['nVidia']], {:prompt => 'Select Video Brand'}, {class: "form-control"}) %>
       <%= f.text_field :video_brand, class: "form-control", placeholder: "Video brand" %>
     </div>
+
     <br>
     <div class="field">
       <%= f.select(:video_model, [[''], ['HD Graphics'], ['Iris Graphics'], ['Iris Pro Graphics'], ['GT 750M'], ['R9 M370X']], {:prompt => 'Select Model'}, {class: "form-control"}) %>
       <%= f.text_field :video_model, class: "form-control", placeholder: "Video model" %>
     </div>
+
     <br>
     <div class="field">
       <%= f.select(:display, [[''], ['8.0"'], ['10.0"'], ['11.0"'], ['12.0"'], ['13.0"'], ['14.0"'], ['15.0"'], ['16.0"'], ['17.0"'], ['18.0"']], {:prompt => 'Select Display'}, {class: "form-control"}) %>
     </div>
+
     <br>
     <div class="field">
       <%= f.text_field :resolution, class: "form-control", placeholder: "Resolution" %>
     </div>
+
     <br>
     <div class="field">
       <%= f.select :os, [["No"],["Yes"]], {}, {class: "form-control"} %>
     </div>
+
     <br>
     <div class="field">
       <%= f.select :os, [["OSX"]], {}, {class: "form-control"} %>
