@@ -1,0 +1,59 @@
+<div class="search-form">
+  <%= form_tag tablets_path, :method => 'get' do %>
+      <%= text_field_tag :search, params[:search], placeholder: 'Search for...'%>
+      <%= submit_tag "Search", class: 'btn btn-default SearchButton' %>
+  <% end %>
+  Listing Tablets
+  <%= link_to 'New Tablet', new_tablet_path %>
+
+</div>
+
+<%= form_tag search_tablets_path, method: :get do |f| %>
+    <%= select_tag :model, options_from_collection_for_select(Tablet.all, :id, :model)%>
+    <%= submit_tag "search" %>
+<% end %>
+
+
+<div class="table-form">
+  <% unless notice.nil? %>
+      <p id="notice"><%= notice %></p>
+  <% end %>
+  <br>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Seria</th>
+      <th>Model</th>
+      <th>Connection</th>
+      <th>Storage</th>
+      <th>Color</th>
+      <th>Aen</th>
+      <th>Partnumber</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @tablets.each do |tablet| %>
+        <tr>
+          <td><%= tablet.brand %></td>
+          <td><%= tablet.seria %></td>
+          <td><%= tablet.model %></td>
+          <td><%= tablet.connection %></td>
+          <td><%= tablet.storage %></td>
+          <td><%= tablet.color %></td>
+          <td><%= tablet.aen %></td>
+          <td><%= tablet.partnumber %></td>
+          <td><%= link_to 'Show', tablet %></td>
+          <td><%= link_to 'Edit', edit_tablet_path(tablet) %></td>
+          <td><%= link_to 'Destroy', tablet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+  </form>
+</div>

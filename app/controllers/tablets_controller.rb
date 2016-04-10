@@ -4,8 +4,13 @@ class TabletsController < ApplicationController
   # GET /tablets
   # GET /tablets.json
   def index
-    @tablets = Tablet.where(["brand LIKE ?", "%#{params[:search]}%"])
+    @tablets = Tablet.where(["model LIKE ?", "%#{params[:search]}%"])
     #@tablets = Tablet.all
+  end
+
+  def search
+    @tablets = Tablet.search(params)
+    #render text: @tablets
   end
 
   # GET /tablets/1

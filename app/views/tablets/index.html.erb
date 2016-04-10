@@ -6,7 +6,13 @@
   Listing Tablets
   <%= link_to 'New Tablet', new_tablet_path %>
 
+  <%= form_tag tablets_path, method: :get do |f| %>
+      <%= select_tag :search, options_from_collection_for_select(Tablet.all, :model, :model), id: 'filter-search' %>
+      <%= submit_tag "Search" %>
+  <% end %>
 </div>
+
+
 
 
 <div class="table-form">
