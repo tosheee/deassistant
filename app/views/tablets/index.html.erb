@@ -7,10 +7,10 @@
   <%= link_to 'New Tablet', new_tablet_path %>
 
   <%= form_tag tablets_path, method: :get do |f| %>
-      <%= select_tag :search, options_for_select(["Air", "Air 2", "Mini", "Mini 2", "Mini 3", "Mini 4", "Pro", "Pro 9.7" ], ""), :prompt => 'Model', id: 'filter-search' %>
-      <%= select_tag :search, options_for_select(["Wi-Fi", "Wi-Fi+Cell"], ""), :prompt => 'Connection', id: 'filter-search' %>
-      <%= select_tag :search, options_for_select(["16 Gb", "32 Gb", "64 Gb", "128 Gb", "256 Gb"], ""),:prompt => 'Storage', id: 'filter-search' %>
-      <%= select_tag :search, options_for_select(["Silver", "Gold", "Rose Gold", "Space Grey"], ""), :prompt => 'Color', id: 'filter-search' %>
+      <%= select_tag :model, options_for_select(["Air'", "Air 2", "Mini", "Mini 2", "Mini 3", "Mini 4", "Pro", "Pro 9.7" ], ""), :prompt => 'Model', id: 'filter-search' %>
+      <%= select_tag :connection, options_for_select(["Wi-Fi", "Wi-Fi Cell"], ""), :prompt => 'Connection', id: 'filter-search' %>
+      <%= select_tag :storage, options_for_select(["16 Gb", "32 Gb", "64 Gb", "128 Gb", "256 Gb"], ""),:prompt => 'Storage', id: 'filter-search' %>
+      <%= select_tag :color, options_for_select(["Silver", "Gold", "Rose Gold", "Space Grey"], ""), :prompt => 'Color', id: 'filter-search' %>
       <%= submit_tag "Search" %>
   <% end %>
 </div>

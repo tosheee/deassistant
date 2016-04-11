@@ -4,10 +4,14 @@ class TabletsController < ApplicationController
   # GET /tablets
   # GET /tablets.json
   def index
+    #render text: params.inspect
+    #sear = params.require(:tablet).permit(:model, :connection)
+    #render text: sear
     @tablets = Tablet.index(params)
   end
 
   def search
+    render text: params.inspect
     @tablets = Tablet.search(params)
     #render text: @tablets
   end

@@ -1,13 +1,17 @@
 class Tablet < ActiveRecord::Base
 
   def self.index(params)
-    #tablets = Tablet.where(["model LIKE ?", "%#{params[:search]}%"]) if params[:search].present?
-    #tablets = Tablet.where(["connection LIKE ?", "%#{params[:search]}%"]) if params[:search].present?
-    #tablets = Tablet.where(["storage LIKE ?", "%#{params[:search]}%"]) if params[:search].present?
-    #tablets = Tablet.where(["color LIKE ?", "%#{params[:search]}%"]) if params[:search].present?
-    tablets = Tablet.where(["model LIKE ? or connection LIKE ? or storage LIKE ? or color LIKE?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%"])
+    unless params[:model].nil?
+    tablets = Tablet.where(["model LIKE ?", "%#{params[:model]}%"]) if params[:model].present?
+    tablets = Tablet.where(["connection LIKE ?", "%#{params[:connection]}%"]) if params[:connection].present?
+    tablets = Tablet.where(["storage LIKE ?", "%#{params[:storage]}%"]) if params[:storage].present?
+    tablets = Tablet.where(["color LIKE ?", "%#{params[:color]}%"]) if params[:color].present?
+    #tablets = Tablet.where(["model LIKE ? or connection LIKE ? or storage LIKE ? or color LIKE?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%"])
     #where("model like ? or storage like?", "%{params[:search]}%", "%{params[:search]}%")
     #tablets = Tablet.where(["model LIKE ?", "%#{params[:search]}%"])
+    else
+      tablets = Tablet.where(["model LIKE ?", "%#{params[:search]}%"])
+    end
     tablets
   end
 
