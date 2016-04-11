@@ -9,7 +9,7 @@ class Tablet < ActiveRecord::Base
       case
 
         when model.present? && connection.present? && storage.present? && color.present?
-          tablets = Tablet.where(["model LIKE ? or connection LIKE ? or storage LIKE ? or color LIKE?", "%#{model}%", "%#{connection}%", "%#{storage}%", "%#{color}%"])
+          tablets = Tablet.where(["model LIKE ? and connection LIKE ? and storage LIKE ? and color LIKE?", "%#{model}%", "%#{connection}%", "%#{storage}%", "%#{color}%"])
 
         when model.present?
           tablets = Tablet.where(["model LIKE ?", "%#{model}%"])
@@ -19,22 +19,23 @@ class Tablet < ActiveRecord::Base
           tablets = Tablet.where(["storage LIKE ?", "%#{storage}%"])
         when color.present?
           tablets = Tablet.where(["color LIKE ?", "%#{color}%"])
+
         when model.present? && connection.present?
-          tablets = Tablet.where(["model LIKE ? or connection LIKE ? ", "%#{model}%", "%#{connection}%"])
+          tablets = Tablet.where(["model LIKE ? and connection LIKE ? ", "%#{model}%", "%#{connection}%"])
 
         when model.present? && storage.present?
-          tablets = Tablet.where(["model LIKE ? or storage LIKE ?", "%#{model}%", "%#{storage}%"])
+          tablets = Tablet.where(["model LIKE ? and storage LIKE ?", "%#{model}%", "%#{storage}%"])
 
         when model.present? && color.present?
-          tablets = Tablet.where(["model LIKE ? or color LIKE ?", "%#{model}%", "%#{color}%"])
+          tablets = Tablet.where(["model LIKE ? and color LIKE ?", "%#{model}%", "%#{color}%"])
 
         when storage.present? && color.present?
-          tablets = Tablet.select_values(["storage LIKE ? or color LIKE ?", "%#{storage}%", "%#{color}%"])
+          tablets = Tablet.(["storage LIKE ? and color LIKE ?", "%#{storage}%", "%#{color}%"])
 
         when model.present? && connection.present? && storage.present?
-          tablets = Tablet.where(["model LIKE ? or connection LIKE ? or storage LIKE ? or color LIKE?", "%#{model}%", "%#{connection}%", "%#{storage}%"])
+          tablets = Tablet.where(["model LIKE ? and connection LIKE ? and storage LIKE ? and color LIKE?", "%#{model}%", "%#{connection}%", "%#{storage}%"])
         when model.present? && storage.present? && color.present?
-          tablets = Tablet.where(["model LIKE ? or storage LIKE ? or color LIKE ?", "%#{model}%", "%#{storage}%", "%#{color}%"])
+          tablets = Tablet.where(["model LIKE ? and storage LIKE ? and color LIKE ?", "%#{model}%", "%#{storage}%", "%#{color}%"])
         else
           tablets = Tablet.where(["model LIKE ?", "%#{params[:search]}%"])
       end
