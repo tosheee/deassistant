@@ -5,9 +5,11 @@ class TabletsController < ApplicationController
   # GET /tablets.json
   def index
     #render text: params.inspect
-    #sear = params.require(:tablet).permit(:model, :connection)
-    #render text: sear
-    @tablets = Tablet.index(params)
+    unless params[:model].nil?
+      @tablets = Tablet.index(params)
+    else
+      @tablets = Tablet.all
+    end
   end
 
   def search
