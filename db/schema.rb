@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160409151152) do
+ActiveRecord::Schema.define(version: 20160530201040) do
+
+  create_table "admin_product_categories", force: :cascade do |t|
+    t.string   "name_category"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "admin_products", force: :cascade do |t|
+    t.integer  "product_category_id"
+    t.string   "product_name"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
 
   create_table "apple_macbooks", force: :cascade do |t|
     t.string   "brand"
@@ -55,6 +68,16 @@ ActiveRecord::Schema.define(version: 20160409151152) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "search_ipads", force: :cascade do |t|
+    t.integer  "tablet_id"
+    t.string   "model"
+    t.string   "connection"
+    t.string   "storage"
+    t.string   "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "searches", force: :cascade do |t|
     t.string   "brand"
     t.string   "seria"
@@ -64,6 +87,12 @@ ActiveRecord::Schema.define(version: 20160409151152) do
     t.string   "color"
     t.string   "aen"
     t.string   "partnumber"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "smartphone_brands", force: :cascade do |t|
+    t.string   "brand"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
