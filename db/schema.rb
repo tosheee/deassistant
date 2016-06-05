@@ -68,35 +68,6 @@ ActiveRecord::Schema.define(version: 20160530201040) do
     t.datetime "updated_at",   null: false
   end
 
-  create_table "search_ipads", force: :cascade do |t|
-    t.integer  "tablet_id"
-    t.string   "model"
-    t.string   "connection"
-    t.string   "storage"
-    t.string   "color"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "searches", force: :cascade do |t|
-    t.string   "brand"
-    t.string   "seria"
-    t.string   "model"
-    t.string   "connection"
-    t.string   "storage"
-    t.string   "color"
-    t.string   "aen"
-    t.string   "partnumber"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "smartphone_brands", force: :cascade do |t|
-    t.string   "brand"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "tablets", force: :cascade do |t|
     t.string   "brand"
     t.string   "seria"
