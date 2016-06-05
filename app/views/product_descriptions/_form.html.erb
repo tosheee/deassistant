@@ -1,0 +1,177 @@
+<%= form_for(@product_description) do |f| %>
+  <% if @product_description.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product_description.errors.count, "error") %> prohibited this product_description from being saved:</h2>
+
+      <ul>
+      <% @product_description.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <div class="">
+      <%= f.collection_select(:product_id, Admin::Product.all, :id, :product_name, {:class => 'prevent_collapse'}, :prompt => 'Select product')  %>
+    </div>
+
+  <div class="field">
+    <%= f.label :product_description %><br>
+    <%= f.text_area :product_description, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+    <br>
+    <div class="field">
+      <%= f.select :attr_p1, [["Brand"]], {}, {class: "form-control"} %>
+    </div>
+
+  <div class="field">
+    <%= f.text_area :attr_descript_p1, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.select :attr_p2, [["Seria"]], {}, {class: "form-control"} %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :attr_descript_p2, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.select :attr_p3, [["Model"]], {}, {class: "form-control"} %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p3, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p4, class: "form-control"%>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p20, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p5, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p5, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p6, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p6, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p7, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p7, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p8, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p8, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p9, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p9, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p10, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p10, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p11, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p11, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p12, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p12, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p13, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p13, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p14, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p14, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p15, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p15, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p16, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p16, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p17, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p17, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p18, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :attr_descript_p18, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+  <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p19, class: "form-control" %>
+  </div>
+
+    <div class="field">
+    <%= f.text_area :attr_descript_p19, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+
+    <div class="field">
+    <%= f.label :name_attribute %><br>
+    <%= f.text_field :attr_p20, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :attr_descript_p20, class: "form-control", placeholder: "Enter Description" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

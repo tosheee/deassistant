@@ -1,0 +1,182 @@
+<div class="wrapper_show">
+<% unless @product_description.product_id.to_s.empty? %>
+
+  <div id="description-heading">
+    <h3><strong><%= @name_product.first %></strong></h3>
+  </div>
+
+<strong>Product description:</strong>
+
+      <div id="long-descript">
+  <%= @product_description.product_description %>
+</div>
+
+<% unless @product_description.attr_p1.empty? %>
+    <details>
+        <summary><strong><%= @product_description.attr_p1 %></strong></summary>
+       <pre> <%= @product_description.attr_descript_p1 %></pre>
+    </details>
+          <hr>
+<% end %>
+
+
+<% unless @product_description.attr_p2.empty? %>
+  <details>
+    <summary><strong><%= @product_description.attr_p2 %></strong></summary>
+    <pre><%= @product_description.attr_descript_p2 %></pre>
+  </details>
+          <hr>
+<% end %>
+
+<% unless @product_description.attr_p3.empty? %>
+  <details>
+    <summary><strong><%= @product_description.attr_p3 %></strong></summary>
+    <pre><%= @product_description.attr_descript_p3 %></pre>
+  </details>
+          <hr>
+<% end %>
+
+
+  <% unless @product_description.attr_p4.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p4 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p4 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p5.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p5 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p5 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p6.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p6 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p6 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p7.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p7 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p7 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p8.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p8 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p8 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p9.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p9 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p9 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p10.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p10 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p10 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p11.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p11 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p11 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p12.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p12 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p12 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p13.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p13 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p13 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p14.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p14 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p14 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p15.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p15 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p15 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p16.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p16 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p16 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p17.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p17 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p17 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p18.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p18 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p18 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+  <% unless @product_description.attr_p19.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p19 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p19 %></pre>
+      </details>
+          <hr>
+  <% end %>
+  <% unless @product_description.attr_p20.empty? %>
+      <details>
+        <summary><strong><%= @product_description.attr_p20 %></strong></summary>
+        <pre><%= @product_description.attr_descript_p20 %></pre>
+      </details>
+          <hr>
+  <% end %>
+
+      <%= link_to 'Edit', edit_product_description_path(@product_description) %> |
+      <%= link_to 'Back', product_descriptions_path %>
+</div>
+      <% else %>
+
+  <h4>Nqma</h4>
+
+<% end %>

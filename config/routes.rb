@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :product_descriptions
+  resources :product_descriptions
   namespace :admin do
     resources :products
   end

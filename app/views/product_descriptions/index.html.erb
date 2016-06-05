@@ -1,0 +1,109 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Product Descriptions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Product description</th>
+      <th>Attr p1</th>
+      <th>Attr descript p1</th>
+      <th>Attr p2</th>
+      <th>Attr descript p2</th>
+      <th>Attr p3</th>
+      <th>Attr descript p3</th>
+      <th>Attr p4</th>
+      <th>Attr descript p4</th>
+      <th>Attr p5</th>
+      <th>Attr descript p5</th>
+      <th>Attr p6</th>
+      <th>Attr descript p6</th>
+      <th>Attr p7</th>
+      <th>Attr descript p7</th>
+      <th>Attr p8</th>
+      <th>Attr descript p8</th>
+      <th>Attr p9</th>
+      <th>Attr descript p9</th>
+      <th>Attr p10</th>
+      <th>Attr descript p10</th>
+      <th>Attr p11</th>
+      <th>Attr descript p11</th>
+      <th>Attr p12</th>
+      <th>Attr descript p12</th>
+      <th>Attr p13</th>
+      <th>Attr descript p13</th>
+      <th>Attr p14</th>
+      <th>Attr descript p14</th>
+      <th>Attr p15</th>
+      <th>Attr descript p15</th>
+      <th>Attr p16</th>
+      <th>Attr descript p16</th>
+      <th>Attr p17</th>
+      <th>Attr descript p17</th>
+      <th>Attr p18</th>
+      <th>Attr descript p18</th>
+      <th>Attr p19</th>
+      <th>Attr descript p19</th>
+      <th>Attr p20</th>
+      <th>Attr descript p20</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @product_descriptions.each do |product_description| %>
+      <tr>
+        <td><%= product_description.product_id %></td>
+        <td><%= product_description.product_description %></td>
+        <td><%= product_description.attr_p1 %></td>
+        <td><%= product_description.attr_descript_p1 %></td>
+        <td><%= product_description.attr_p2 %></td>
+        <td><%= product_description.attr_descript_p2 %></td>
+        <td><%= product_description.attr_p3 %></td>
+        <td><%= product_description.attr_descript_p3 %></td>
+        <td><%= product_description.attr_p4 %></td>
+        <td><%= product_description.attr_descript_p4 %></td>
+        <td><%= product_description.attr_p5 %></td>
+        <td><%= product_description.attr_descript_p5 %></td>
+        <td><%= product_description.attr_p6 %></td>
+        <td><%= product_description.attr_descript_p6 %></td>
+        <td><%= product_description.attr_p7 %></td>
+        <td><%= product_description.attr_descript_p7 %></td>
+        <td><%= product_description.attr_p8 %></td>
+        <td><%= product_description.attr_descript_p8 %></td>
+        <td><%= product_description.attr_p9 %></td>
+        <td><%= product_description.attr_descript_p9 %></td>
+        <td><%= product_description.attr_p10 %></td>
+        <td><%= product_description.attr_descript_p10 %></td>
+        <td><%= product_description.attr_p11 %></td>
+        <td><%= product_description.attr_descript_p11 %></td>
+        <td><%= product_description.attr_p12 %></td>
+        <td><%= product_description.attr_descript_p12 %></td>
+        <td><%= product_description.attr_p13 %></td>
+        <td><%= product_description.attr_descript_p13 %></td>
+        <td><%= product_description.attr_p14 %></td>
+        <td><%= product_description.attr_descript_p14 %></td>
+        <td><%= product_description.attr_p15 %></td>
+        <td><%= product_description.attr_descript_p15 %></td>
+        <td><%= product_description.attr_p16 %></td>
+        <td><%= product_description.attr_descript_p16 %></td>
+        <td><%= product_description.attr_p17 %></td>
+        <td><%= product_description.attr_descript_p17 %></td>
+        <td><%= product_description.attr_p18 %></td>
+        <td><%= product_description.attr_descript_p18 %></td>
+        <td><%= product_description.attr_p19 %></td>
+        <td><%= product_description.attr_descript_p19 %></td>
+        <td><%= product_description.attr_p20 %></td>
+        <td><%= product_description.attr_descript_p20 %></td>
+        <td><%= link_to 'Show', product_description %></td>
+        <td><%= link_to 'Edit', edit_product_description_path(product_description) %></td>
+        <td><%= link_to 'Destroy', product_description, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product description', new_product_description_path %>

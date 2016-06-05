@@ -27,7 +27,7 @@
                     <ul class="dropdown-menu">
                       <% (Admin::Product.all).each do |product| %>
                            <% if product.product_category_id == category.id %>
-                              <li class="menu-item"><a href="/products/<%=product.product_name.downcase.gsub(' ','_') %>" ><%= product.product_name %></a>
+                              <li class="menu-item"><a href="/product_descriptions/<%= product.id %>" ><%= product.product_name %></a>
                            <% end %>
                         <% end %>
                       </li>

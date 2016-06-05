@@ -5,71 +5,100 @@
 @import "apple_macbooks";
 
 
-body{
+body {
 
- .wrapper{
+  .wrapper {
 
-   .navbar.navbar-inverse{
-     border-radius: 0;
+    .navbar.navbar-inverse {
+      border-radius: 0;
 
-   }
-   .dropdown-submenu {
-     position:relative;
-   }
-   .dropdown-submenu>.dropdown-menu {
-     top:0;
-     left:100%;
-     margin-top:-6px;
-     margin-left:-1px;
-     -webkit-border-radius:0 6px 6px 6px;
-     -moz-border-radius:0 6px 6px 6px;
-     border-radius:0 6px 6px 6px;
-   }
-   .dropdown-submenu:hover>.dropdown-menu {
-     display:block;
-   }
-   .dropdown-submenu>a:after {
-     display:block;
-     content:" ";
-     float:right;
-     width:0;
-     height:0;
-     border-color:transparent;
-     border-style:solid;
-     border-width:5px 0 5px 5px;
-     border-left-color:#cccccc;
-     margin-top:5px;
-     margin-right:-10px;
-   }
-   .dropdown-submenu:hover>a:after {
-     border-left-color:#ffffff;
-   }
-   .dropdown-submenu.pull-left {
-     float:none;
-   }
-   .dropdown-submenu.pull-left>.dropdown-menu {
-     left:-100%;
-     margin-left:10px;
-     -webkit-border-radius:6px 0 6px 6px;
-     -moz-border-radius:6px 0 6px 6px;
-     border-radius:6px 0 6px 6px;
-   }
+    }
+    .dropdown-submenu {
+      position: relative;
+    }
+    .dropdown-submenu > .dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-top: -6px;
+      margin-left: -1px;
+      -webkit-border-radius: 0 6px 6px 6px;
+      -moz-border-radius: 0 6px 6px 6px;
+      border-radius: 0 6px 6px 6px;
+    }
+    .dropdown-submenu:hover > .dropdown-menu {
+      display: block;
+    }
+    .dropdown-submenu > a:after {
+      display: block;
+      content: " ";
+      float: right;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid;
+      border-width: 5px 0 5px 5px;
+      border-left-color: #cccccc;
+      margin-top: 5px;
+      margin-right: -10px;
+    }
+    .dropdown-submenu:hover > a:after {
+      border-left-color: #ffffff;
+    }
+    .dropdown-submenu.pull-left {
+      float: none;
+    }
+    .dropdown-submenu.pull-left > .dropdown-menu {
+      left: -100%;
+      margin-left: 10px;
+      -webkit-border-radius: 6px 0 6px 6px;
+      -moz-border-radius: 6px 0 6px 6px;
+      border-radius: 6px 0 6px 6px;
+    }
 
-
-   #top-messages{
-    text-align: center;
-   }
-    main{
+    #top-messages {
+      text-align: center;
+    }
+    main {
       width: 98%;
       margin: 0 auto;
 
-       .form-user{
-         margin: 0 auto;
-         padding: 20px;
-         width: 400px;
-         border-radius: 10px;
-       }
+      .form-user {
+        margin: 0 auto;
+        padding: 20px;
+        width: 400px;
+        border-radius: 10px;
 
+      }
+      .wrapper_show {
+        #description-heading{
+          text-align: center;
+        }
+        #long-descript{
+          width: 100%;
+          padding:10px;
+          border-width:0.5px;
+          border-style:solid;
+          border-radius: 5px;
+        }
+        border-width:0.5px;
+        border-style:none dotted none dotted;
+        width: 650px;
+        padding: 50px;
+        margin: 0 auto;
+        font-size: 16px;
+
+        summary {
+          color: #666666;
+          padding: 5px;
+          font-size: 16px;
+          outline: none;
+        }
+        summary:hover {
+          color: #00cccc;
+
+        }
+
+      }
     }
- }
+  }
 }
