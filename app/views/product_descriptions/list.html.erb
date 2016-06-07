@@ -1,0 +1,15 @@
+<div class="wrapper_show">
+
+    <div id="description-heading">
+      <h3><strong><%=@product[0][1]%></strong></h3>
+    </div>
+    <hr>
+    <% @product_attributes.each do |attribute| %>
+
+     <details>
+        <summary><strong><%= attribute[1] %></strong></summary>
+       &#160;&#160;&#160;&#160;&#160;&#160; <%= attribute[2] %>
+    </details>
+      <hr>
+    <% end %>
+</div>
