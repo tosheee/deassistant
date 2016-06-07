@@ -1,23 +1,18 @@
 Rails.application.routes.draw do
 
-  resources :product_descriptions
-  resources :product_descriptions
-  namespace :admin do
-    resources :products
-  end
-  namespace :admin do
-    resources :product_categories
-  end
-  resources :apple_macbooks
-  resources :tablets do
-    collection do
-      get 'search'
-    end
-  end
-  devise_for :users
-
   root 'static_pages#deassistant'
 
-  resources :normalizations
+  devise_for :users
 
+  namespace :admin do
+    resources :product_categories
+    resources :products
+    resources :product_attributes
+  end
+  resources :apple_macbooks
+  resources :tablets
+
+  controller 'product_descriptions' do
+      get 'product_descriptions/:id', action: :list
+  end
 end

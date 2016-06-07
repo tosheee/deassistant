@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Product Attributes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Name attribute</th>
+      <th>Attribute description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_product_attributes.each do |admin_product_attribute| %>
+      <tr>
+        <td><%= admin_product_attribute.product_id %></td>
+        <td><%= admin_product_attribute.name_attribute %></td>
+        <td><%= admin_product_attribute.attribute_description %></td>
+        <td><%= link_to 'Show', admin_product_attribute %></td>
+        <td><%= link_to 'Edit', edit_admin_product_attribute_path(admin_product_attribute) %></td>
+        <td><%= link_to 'Destroy', admin_product_attribute, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product attribute', new_admin_product_attribute_path %>
