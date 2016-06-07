@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
+<div id="wrapper-admin-index">
+<h4>Listing Admin Product Categories</h4>
 
-<h1>Listing Admin Product Categories</h1>
-
-<table>
+<table id="keywords" cellpadding="0" cellspacing="0">
   <thead>
     <tr>
       <th>Name category</th>
@@ -13,7 +13,7 @@
   <tbody>
     <% @admin_product_categories.each do |admin_product_category| %>
       <tr>
-        <td><%= admin_product_category.name_category %></td>
+        <td class="lalign"><%= admin_product_category.name_category %></td>
         <td><%= link_to 'Show', admin_product_category %></td>
         <td><%= link_to 'Edit', edit_admin_product_category_path(admin_product_category) %></td>
         <td><%= link_to 'Destroy', admin_product_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,3 +25,4 @@
 <br>
 
 <%= link_to 'New Product category', new_admin_product_category_path %>
+</div>

@@ -4,7 +4,7 @@
 @import "tablets";
 @import "apple_macbooks";
 @import "admin/admin_vertical_menu";
-
+@import "admin/product_attributes";
 body {
 
   .wrapper {
@@ -80,8 +80,6 @@ body {
           border-style:solid;
           border-radius: 5px;
         }
-        border-width:0.5px;
-        border-style:none dotted none dotted;
         width: 650px;
         padding: 50px;
         margin: 0 auto;

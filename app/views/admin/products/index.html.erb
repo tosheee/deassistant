@@ -1,13 +1,11 @@
-<div >
+<div id="wrapper-admin-index">
   <%= render 'admin/admin_vertical_menu'%>
   </div>
-
-
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Admin Products</h1>
-
-<table>
+<div id="wrapper-admin-index">
+<h4>Listing Admin Products</h4>
+  <%= link_to 'New Product', new_admin_product_path %>
+<table id="keywords">
   <thead>
     <tr>
       <th>Product category</th>
@@ -19,7 +17,8 @@
   <tbody>
     <% @admin_products.each do |admin_product| %>
       <tr>
-        <td><%= admin_product.product_category_id %></td>
+        <td class="lalign"><%=Admin::ProductCategory.find(admin_product.product_category_id).name_category %></td>
+        <td class="lalign"><%= admin_product.product_category_id %></td>
         <td><%= admin_product.product_name %></td>
         <td><%= link_to 'Show', admin_product %></td>
         <td><%= link_to 'Edit', edit_admin_product_path(admin_product) %></td>
@@ -30,5 +29,4 @@
 </table>
 
 <br>
-
-<%= link_to 'New Product', new_admin_product_path %>
+</div>

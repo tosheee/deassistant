@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
+<div id="wrapper-admin-index">
+<h4>Listing Admin Product Attributes</h4>
 
-<h1>Listing Admin Product Attributes</h1>
-
-<table>
+<table id="keywords" cellspacing="0" cellpadding="0">
   <thead>
     <tr>
       <th>Product</th>
@@ -15,7 +15,7 @@
   <tbody>
     <% @admin_product_attributes.each do |admin_product_attribute| %>
       <tr>
-        <td><%= admin_product_attribute.product_id %></td>
+        <td class="lalign"><%=Admin::Product.find(admin_product_attribute.product_id).product_name %></td>
         <td><%= admin_product_attribute.name_attribute %></td>
         <td><%= admin_product_attribute.attribute_description %></td>
         <td><%= link_to 'Show', admin_product_attribute %></td>
@@ -29,3 +29,4 @@
 <br>
 
 <%= link_to 'New Product attribute', new_admin_product_attribute_path %>
+</div>

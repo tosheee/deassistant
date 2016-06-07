@@ -3,3 +3,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(function(){
+    $('#keywords').tablesorter();
+});
