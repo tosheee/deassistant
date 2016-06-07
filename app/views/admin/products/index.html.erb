@@ -18,7 +18,6 @@
     <% @admin_products.each do |admin_product| %>
       <tr>
         <td class="lalign"><%=Admin::ProductCategory.find(admin_product.product_category_id).name_category %></td>
-        <td class="lalign"><%= admin_product.product_category_id %></td>
         <td><%= admin_product.product_name %></td>
         <td><%= link_to 'Show', admin_product %></td>
         <td><%= link_to 'Edit', edit_admin_product_path(admin_product) %></td>
