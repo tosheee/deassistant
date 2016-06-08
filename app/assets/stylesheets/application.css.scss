@@ -80,7 +80,7 @@ body {
           border-style:solid;
           border-radius: 5px;
         }
-        width: 650px;
+        width: 850px;
         padding: 50px;
         margin: 0 auto;
         font-size: 16px;
@@ -93,9 +93,11 @@ body {
         }
         summary:hover {
           color: #00cccc;
-
         }
 
+      }
+      pre{
+        padding: 10px;
       }
       select{
         width: 360px;
@@ -103,7 +105,8 @@ body {
         font-size: 16px;
         line-height: 1;
         border: 0;
-        border-radius: 0;
+        background-color: #DADADA;
+        border-radius: 5px;
         height: 34px;
         -webkit-appearance: none;
       }
