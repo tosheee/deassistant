@@ -9,7 +9,7 @@
     <% @product_attributes.each do |attribute| %>
 
      <details>
-        <summary><strong><%= attribute.name_attribute %></strong></summary>
+        <summary><%= attribute.num_view %>. <strong><%= attribute.name_attribute %></strong></summary>
        <% unless attribute.attribute_description.empty? %>
          <pre> <%= attribute.attribute_description %></pre>
        <% end %>
