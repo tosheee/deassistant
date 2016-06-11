@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160606200036) do
+ActiveRecord::Schema.define(version: 20160608090935) do
 
   create_table "admin_product_attributes", force: :cascade do |t|
     t.integer  "product_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160606200036) do
     t.text     "attribute_description"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+    t.integer  "num_view"
   end
 
   create_table "admin_product_categories", force: :cascade do |t|

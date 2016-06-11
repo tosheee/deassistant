@@ -1,15 +1,17 @@
 <div class="wrapper_show">
 
     <div id="description-heading">
-      <h3><strong><%=@product[0][1]%></strong></h3>
+      <h3><strong><%=@products.product_name%></strong></h3>
     </div>
     <hr>
+
+
     <% @product_attributes.each do |attribute| %>
 
      <details>
-        <summary><strong><%= attribute[1] %></strong></summary>
-       <% unless attribute[2].empty? %>
-         <pre> <%= attribute[2] %></pre>
+        <summary><strong><%= attribute.name_attribute %></strong></summary>
+       <% unless attribute.attribute_description.empty? %>
+         <pre> <%= attribute.attribute_description %></pre>
        <% end %>
      </details>
      <hr>

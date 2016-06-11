@@ -15,6 +15,10 @@
     <%= f.collection_select(:product_id, Admin::Product.all, :id, :product_name, :prompt => "Select Product")  %>
   </div>
     <br>
+    <div class="field">
+      <%= f.number_field :num_view, class: 'form-control', placeholder: 'Enter Number View' %>
+    </div>
+    <br>
   <div class="field">
     <%= f.text_field :name_attribute, class: 'form-control', placeholder: 'Enter name attribute' %>
   </div>
