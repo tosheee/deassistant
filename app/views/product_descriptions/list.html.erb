@@ -1,3 +1,9 @@
+<div class="top-whitespace"></div>
+
+<div class="nav-vertical">
+  <%= render 'nav_vertical_brands' %>
+</div>
+
 <div class="wrapper_show">
 
     <div id="description-heading">
@@ -11,7 +17,7 @@
      <details>
         <summary><%= attribute.num_view %>. <strong><%= attribute.name_attribute %></strong></summary>
        <% unless attribute.attribute_description.empty? %>
-         <pre> <%= attribute.attribute_description %></pre>
+         <p> <%= attribute.attribute_description %></p>
        <% end %>
      </details>
      <hr>

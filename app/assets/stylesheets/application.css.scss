@@ -5,6 +5,7 @@
 @import "apple_macbooks";
 @import "admin/admin_vertical_menu";
 @import "admin/product_attributes";
+@import "product_descriptions";
 body {
 
   .wrapper {
@@ -115,5 +116,6 @@ body {
         height: 150px;
       }
     }
+
   }
 }

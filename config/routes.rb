@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :features_brands
+  end
   resources :messages
   root 'static_pages#deassistant'
 
