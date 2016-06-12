@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :product_categories
     resources :products
-    resources :product_attributes
+    controller 'product_attributes' do
+      resources :product_attributes
+      get 'product_attributes/:product/:id', action: :list
+    end
+
   end
   resources :apple_macbooks
   resources :tablets
