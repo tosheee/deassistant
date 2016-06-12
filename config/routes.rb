@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :messages
   root 'static_pages#deassistant'
 
   devise_for :users
