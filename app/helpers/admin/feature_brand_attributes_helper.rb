@@ -1,0 +1,2 @@
+module Admin::FeatureBrandAttributesHelper
+end

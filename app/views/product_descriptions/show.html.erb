@@ -1,0 +1,18 @@
+<div class="top-whitespace"></div>
+
+<div class="nav-vertical">
+  <%= render 'nav_vertical_brands' %>
+</div>
+
+<div class="wrapper_show">
+  <% @features_brand_attributes.each do |f_brand_attr| %>
+      <%= f_brand_attr.seria %>
+      <%= f_brand_attr.seria_description %>
+      <%= f_brand_attr.model %>
+      <%= f_brand_attr.model_description %>
+      <%= f_brand_attr.aliases %>
+      <%= f_brand_attr.ean %>
+      <%= f_brand_attr.pn %>
+      <%= f_brand_attr.example %>
+  <% end %>
+</div>

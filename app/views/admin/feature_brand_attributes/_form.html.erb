@@ -1,0 +1,62 @@
+<%= form_for(@admin_feature_brand_attribute) do |f| %>
+  <% if @admin_feature_brand_attribute.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_feature_brand_attribute.errors.count, "error") %> prohibited this admin_feature_brand_attribute from being saved:</h2>
+
+      <ul>
+      <% @admin_feature_brand_attribute.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="field">
+    <%= f.collection_select(:product_id, Admin::Product.all, :id, :product_name, :prompt => "Select Product")  %>
+  </div>
+<br>
+    <div class="field">
+      <%= f.collection_select(:features_brands_id, Admin::FeaturesBrand.all, :id, :brand, :prompt => "Select Product") %>
+    </div>
+    <br>
+  <div class="field">
+    <%= f.text_field :seria,  class: 'form-control', placeholder: 'Enter Product Name' %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :seria_description %><br>
+    <%= f.text_area :seria_description,  class: 'form-control', placeholder: 'Enter Product Name' %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_field :model,  class: 'form-control', placeholder: 'Enter Product Name' %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :aliases %><br>
+    <%= f.text_area :aliases, class: 'form-control', placeholder: 'Enter Product Name' %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :model_description %><br>
+    <%= f.text_area :model_description,  class: 'form-control', placeholder: 'Enter Product Name' %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :ean %><br>
+    <%= f.text_field :ean,  class: 'form-control', placeholder: 'Enter Product Name' %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :pn %><br>
+    <%= f.text_field :pn,  class: 'form-control', placeholder: 'Enter Product Name' %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :example %><br>
+    <%= f.text_area :example, class: 'form-control', placeholder: 'Enter Product Name' %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Save', class: 'btn btn-default navbar-btn' %>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_id: 1
+  features_brands_id: 1
+  seria: MyString
+  seria_description: MyText
+  model: MyString
+  aliases: MyText
+  model_description: MyText
+  ean: MyString
+  pn: MyString
+  example: MyText
+
+two:
+  product_id: 1
+  features_brands_id: 1
+  seria: MyString
+  seria_description: MyText
+  model: MyString
+  aliases: MyText
+  model_description: MyText
+  ean: MyString
+  pn: MyString
+  example: MyText

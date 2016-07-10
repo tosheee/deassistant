@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
   namespace :admin do
+    resources :feature_brand_attributes
+  end
+  namespace :admin do
+    resources :feature_brand_attributes
+  end
+  namespace :admin do
     resources :features_brands
   end
   resources :messages
@@ -22,5 +28,6 @@ Rails.application.routes.draw do
 
   controller 'product_descriptions' do
       get 'product_descriptions/:id', action: :list
+      get 'product_descriptions/:brand/:id', action: :show
   end
 end

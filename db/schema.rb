@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160612205558) do
+ActiveRecord::Schema.define(version: 20160710150812) do
+
+  create_table "admin_feature_brand_attributes", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "features_brands_id"
+    t.string   "seria"
+    t.text     "seria_description"
+    t.string   "model"
+    t.text     "aliases"
+    t.text     "model_description"
+    t.string   "ean"
+    t.string   "pn"
+    t.text     "example"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
   create_table "admin_features_brands", force: :cascade do |t|
     t.integer  "product_id"

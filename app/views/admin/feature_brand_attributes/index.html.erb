@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Feature Brand Attributes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Features brands</th>
+      <th>Seria</th>
+      <th>Seria description</th>
+      <th>Model</th>
+      <th>Aliases</th>
+      <th>Model description</th>
+      <th>Ean</th>
+      <th>Pn</th>
+      <th>Example</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_feature_brand_attributes.each do |admin_feature_brand_attribute| %>
+      <tr>
+        <td><%= admin_feature_brand_attribute.product_id %></td>
+        <td><%= admin_feature_brand_attribute.features_brands_id %></td>
+        <td><%= admin_feature_brand_attribute.seria %></td>
+        <td><%= admin_feature_brand_attribute.seria_description %></td>
+        <td><%= admin_feature_brand_attribute.model %></td>
+        <td><%= admin_feature_brand_attribute.aliases %></td>
+        <td><%= admin_feature_brand_attribute.model_description %></td>
+        <td><%= admin_feature_brand_attribute.ean %></td>
+        <td><%= admin_feature_brand_attribute.pn %></td>
+        <td><%= admin_feature_brand_attribute.example %></td>
+        <td><%= link_to 'Show', admin_feature_brand_attribute %></td>
+        <td><%= link_to 'Edit', edit_admin_feature_brand_attribute_path(admin_feature_brand_attribute) %></td>
+        <td><%= link_to 'Destroy', admin_feature_brand_attribute, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Feature brand attribute', new_admin_feature_brand_attribute_path %>
