@@ -4,9 +4,7 @@
   <tr>
   <th>Brand</th>
   <th>Seria</th>
-  <th>Seria description</th>
   <th>Model</th>
-  <th>Model description</th>
   <th>Aliases</th>
   <th>EAN</th>
   <th>Part Number</th>
@@ -17,10 +15,8 @@
   <% @features_brand_attributes.each do |f_brand_attr| %>
   <tr>
     <td class="lalign"><%=Admin::FeaturesBrand.find(f_brand_attr.features_brands_id).brand %></td>
-      <td><%= f_brand_attr.seria %>
-      <td><%= f_brand_attr.seria_description %>
-      <td><%= f_brand_attr.model %>
-      <td><%= f_brand_attr.model_description %>
+      <td title="<%= f_brand_attr.seria_description %>"><%= f_brand_attr.seria %>
+      <td title="<%= f_brand_attr.model_description %>"><%= f_brand_attr.model %>
       <td><%= f_brand_attr.aliases %>
       <td><%= f_brand_attr.ean %>
       <td><%= f_brand_attr.pn %>
