@@ -1,18 +1,33 @@
-<div class="top-whitespace"></div>
 
-<div class="nav-vertical">
-  <%= render 'nav_vertical_brands' %>
-</div>
-
-<div class="wrapper_show">
+<table id="keywords" class="feature_attribute" cellspacing="0" cellpadding="0">
+  <thead>
+  <tr>
+  <th>Brand</th>
+  <th>Seria</th>
+  <th>Seria description</th>
+  <th>Model</th>
+  <th>Model description</th>
+  <th>Aliases</th>
+  <th>EAN</th>
+  <th>Part Number</th>
+  <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
   <% @features_brand_attributes.each do |f_brand_attr| %>
-      <%= f_brand_attr.seria %>
-      <%= f_brand_attr.seria_description %>
-      <%= f_brand_attr.model %>
-      <%= f_brand_attr.model_description %>
-      <%= f_brand_attr.aliases %>
-      <%= f_brand_attr.ean %>
-      <%= f_brand_attr.pn %>
-      <%= f_brand_attr.example %>
+  <tr>
+    <td class="lalign"><%=Admin::FeaturesBrand.find(f_brand_attr.features_brands_id).brand %></td>
+      <td><%= f_brand_attr.seria %>
+      <td><%= f_brand_attr.seria_description %>
+      <td><%= f_brand_attr.model %>
+      <td><%= f_brand_attr.model_description %>
+      <td><%= f_brand_attr.aliases %>
+      <td><%= f_brand_attr.ean %>
+      <td><%= f_brand_attr.pn %>
+      <td><a href= "<%= f_brand_attr.example%>" target="_blank"> <%= "Example"  %></a><td>
+  </tr>
   <% end %>
+  </tbody>
+    </table>
 </div>
+    </div>
