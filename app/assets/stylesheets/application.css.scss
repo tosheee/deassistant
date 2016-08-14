@@ -92,6 +92,9 @@ body {
           padding: 5px;
           font-size: 16px;
           outline: none;
+          #edit-link{
+            float: right;
+          }
         }
         summary:hover {
           color: #00cccc;
@@ -116,6 +119,7 @@ body {
         width: 360px;
         height: 150px;
       }
+
     }
 
   }

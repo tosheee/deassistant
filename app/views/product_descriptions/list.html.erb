@@ -15,7 +15,7 @@
     <% @product_attributes.each do |attribute| %>
 
      <details>
-        <summary><%= attribute.num_view %>. <strong><%= attribute.name_attribute %></strong></summary>
+        <summary><%= attribute.num_view %>. <strong><%= attribute.name_attribute %></strong><i id="edit-link"><%= link_to 'Edit', "/admin/product_attributes/#{edit_admin_product_path(attribute).gsub('/admin/products/', '')}" %></i></summary>
        <% unless attribute.attribute_description.empty? %>
          <pre> <%= attribute.attribute_description %></pre>
        <% end %>
