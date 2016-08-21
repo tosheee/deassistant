@@ -1,0 +1,45 @@
+<%= form_for(@admin_feature_brand_attribute) do |f| %>
+    <div>
+    <p>New <b><%= @name_brand.upcase %></b></p><%= link_to 'Back', "/product_descriptions/#{@product_id}" %>
+    </div>
+    <div class="field">
+      <%= f.hidden_field(:product_id,  required: true, value: @product_id) %>
+    </div>
+    <div class="field">
+      <%= f.hidden_field(:features_brands_id, required: true, value: @brand_id)%>
+    </div>
+    <div class="field">
+      <%= f.text_field :seria,  class: 'form-control', placeholder: 'Enter Seria' %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.text_area :seria_description,  class: 'form-control', placeholder: 'Enter Seria description' %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.text_field :model,  class: 'form-control', placeholder: 'Enter Model' %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.text_area :aliases, class: 'form-control', placeholder: 'Enter Aliases' %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.text_area :model_description,  class: 'form-control', placeholder: 'Enter Model Description' %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.text_field :ean,  class: 'form-control', placeholder: 'Enter EAN' %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.text_field :pn,  class: 'form-control', placeholder: 'Enter Product Number' %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.text_area :example, class: 'form-control', placeholder: 'Enter Example' %>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Save', class: 'btn btn-default navbar-btn' %>
+    </div>
+<% end %>

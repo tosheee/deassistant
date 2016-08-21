@@ -1,5 +1,5 @@
 <ul>
 <% @features_brands.each do |f_brand|%>
- <li><%= link_to f_brand.brand, "/product_descriptions/#{f_brand.brand.downcase}/#{f_brand.id}" %></li>
+ <li><%= link_to f_brand.brand, "/product_descriptions/#{f_brand.product_id}/#{f_brand.brand.downcase}/#{f_brand.id}" %></li>
   <% end %>
 </ul>

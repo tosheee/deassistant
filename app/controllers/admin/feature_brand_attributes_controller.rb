@@ -25,16 +25,11 @@ class Admin::FeatureBrandAttributesController < ApplicationController
   # POST /admin/feature_brand_attributes.json
   def create
     @admin_feature_brand_attribute = Admin::FeatureBrandAttribute.new(admin_feature_brand_attribute_params)
-
-    respond_to do |format|
       if @admin_feature_brand_attribute.save
-        format.html { redirect_to @admin_feature_brand_attribute, notice: 'Feature brand attribute was successfully created.' }
-        format.json { render :show, status: :created, location: @admin_feature_brand_attribute }
+        redirect_to :back
       else
-        format.html { render :new }
-        format.json { render json: @admin_feature_brand_attribute.errors, status: :unprocessable_entity }
+        render :new
       end
-    end
   end
 
   # PATCH/PUT /admin/feature_brand_attributes/1
