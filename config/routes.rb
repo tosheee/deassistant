@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   controller 'product_descriptions' do
       get 'product_descriptions/:id', action: :list
       get 'product_descriptions/:id/:brand/:id', action: :show
+      get 'product_descriptions/:product_id/new', action: :new
       get 'product_descriptions/:product_id/:name_brand/:brand_id/new', action: :new
   end
 end

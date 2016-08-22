@@ -17,6 +17,7 @@ class ProductDescriptionsController < ApplicationController
     @product_id = params[:product_id]
     @brand_id  = params[:brand_id]
     @name_brand = params[:name_brand]
+    @brands_product = Admin::FeaturesBrand.where(product_id: params[:product_id])
     @admin_feature_brand_attribute = Admin::FeatureBrandAttribute.new
   end
 
