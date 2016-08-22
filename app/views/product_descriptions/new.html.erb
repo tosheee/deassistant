@@ -8,12 +8,13 @@
       <% end %>
 
       <div class="field">
-        <%= f.text_field(:product_id,  required: true, value: @product_id) %>
+        <p><b><%=Admin::Product.find(@product_id).product_name %></b></p>
+        <%= f.hidden_field(:product_id,  required: true, value: @product_id) %>
       </div>
 
       <div class="field">
           <% unless @name_brand.nil? %>
-            <%= f.text_field(:features_brands_id, required: true, value: @brand_id)%>
+            <%= f.hidden_field(:features_brands_id, required: true, value: @brand_id)%>
           <% else %>
             <%= f.collection_select(:features_brands_id, @brands_product, :id, :brand, :prompt => "Select Brand") %>
         <% end %>
