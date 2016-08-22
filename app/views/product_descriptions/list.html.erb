@@ -1,5 +1,5 @@
 <div class="top-whitespace"></div>
-<%= link_to 'New product', "#{@products.id}/new" %>
+
 <div class="nav-vertical">
   <%= render 'nav_vertical_brands' %>
 </div>
@@ -8,6 +8,8 @@
 
     <div id="description-heading">
       <h3><strong><%=@products.product_name%></strong></h3>
+      <br>
+      <%= link_to "New #{@products.product_name}", "#{@products.id}/new" %>
     </div>
     <hr>
 

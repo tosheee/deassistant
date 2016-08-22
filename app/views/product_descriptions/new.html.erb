@@ -1,6 +1,7 @@
 <div class="form-user">
   <%= form_for(@admin_feature_brand_attribute) do |f| %>
 
+
    <% unless @name_brand.nil? %>
       <div>
         <p>New <b><%= @name_brand.upcase %></b></p><%= link_to 'Back', "/product_descriptions/#{@product_id}" %>
@@ -16,6 +17,7 @@
           <% unless @name_brand.nil? %>
             <%= f.hidden_field(:features_brands_id, required: true, value: @brand_id)%>
           <% else %>
+            <%= link_to 'New Brand', '/admin/features_brands/new'%>
             <%= f.collection_select(:features_brands_id, @brands_product, :id, :brand, :prompt => "Select Brand") %>
         <% end %>
       </div>

@@ -1,7 +1,13 @@
-<% @features_brand_attributes.each do |f_brand_attr| %>
- <a href="<%= f_brand_attr.features_brands_id %>/new" > New <%= Admin::FeaturesBrand.find(f_brand_attr.features_brands_id).brand %></a>
-<% break %>
-<% end %>
+<div id="description-heading">
+  <% @features_brand_attributes.each do |f_brand_attr| %>
+      <h3><strong><%=Admin::FeaturesBrand.find(f_brand_attr.features_brands_id).brand %></strong></h3>
+      <a href="<%= f_brand_attr.features_brands_id %>/new" > New <%= Admin::FeaturesBrand.find(f_brand_attr.features_brands_id).brand %></a>
+      <% break %>
+  <% end %>
+  <br>
+</div>
+<hr>
+
 
 <table id="keywords" class="feature_attribute" cellspacing="0" cellpadding="0">
   <thead>
