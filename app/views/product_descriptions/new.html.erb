@@ -1,6 +1,9 @@
 <div class="form-user">
   <%= form_for(@admin_feature_brand_attribute) do |f| %>
 
+      <div class="nav-vertical">
+        <%= render 'nav_vertical_brands' %>
+      </div>
 
    <% unless @name_brand.nil? %>
       <div>

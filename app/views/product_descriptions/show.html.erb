@@ -1,15 +1,22 @@
-<div id="description-heading">
-  <% @features_brand_attributes.each do |f_brand_attr| %>
-      <h3><strong><%=Admin::FeaturesBrand.find(f_brand_attr.features_brands_id).brand %></strong></h3>
-      <a href="<%= f_brand_attr.features_brands_id %>/new" > New <%= Admin::FeaturesBrand.find(f_brand_attr.features_brands_id).brand %></a>
-      <% break %>
-  <% end %>
-  <br>
+<div class="nav-vertical">
+  <%= render 'nav_vertical_brands' %>
 </div>
-<hr>
 
+<div class="wrapper_show">
 
-<table id="keywords" class="feature_attribute" cellspacing="0" cellpadding="0">
+  <div id="description-heading">
+    <h3><strong><%= @name_brand.upcase %></strong></h3>
+  </div>
+
+  <div class="nav-products">
+    |   <%= link_to "New #{@name_brand}", "#{@brand_id}/new"%>
+    |   <%= link_to "New Brand", "/admin/features_brands/new" %>
+    |    <%= link_to "Back", "/product_descriptions/#{@product_id}" %>|
+  </div>
+
+  <hr>
+
+  <table id="keywords" class="feature_attribute" cellspacing="0" cellpadding="0">
   <thead>
   <tr>
   <th>Brand</th>
@@ -41,3 +48,4 @@
     </table>
 </div>
     </div>
+</div>

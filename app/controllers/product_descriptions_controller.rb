@@ -3,23 +3,35 @@ class ProductDescriptionsController < ApplicationController
 
 
   def list
-     @products = Admin::Product.find(params[:id])
-     @features_brands = Admin::FeaturesBrand.where(product_id: params[:id])
-     @product_attributes = Admin::ProductAttribute.where(product_id: params[:id]).order("num_view ASC")
+     @products = Admin::Product.find(params[:product_id])
+     @features_brands = Admin::FeaturesBrand.where(product_id: params[:product_id])
+     @product_attributes = Admin::ProductAttribute.where(product_id: params[:product_id]).order("num_view ASC")
   end
 
+
+
   def show
-    @features_brands = Admin::FeaturesBrand.where(product_id: params[:id])
-    @features_brand_attributes = Admin::FeatureBrandAttribute.where(features_brands_id: params[:id])
+    @product_id = params[:product_id]
+    @brand_id  = params[:brand_id]
+    @name_brand = params[:name_brand]
+    @brands_product = Admin::FeaturesBrand.where(product_id: params[:product_id])
+    @features_brands = Admin::FeaturesBrand.where(product_id: params[:product_id])
+    @features_brand_attributes = Admin::FeatureBrandAttribute.where(features_brands_id: params[:brand_id])
   end
+
+
+
 
   def new
     @product_id = params[:product_id]
     @brand_id  = params[:brand_id]
     @name_brand = params[:name_brand]
+    @features_brands = Admin::FeaturesBrand.where(product_id: params[:id])
     @brands_product = Admin::FeaturesBrand.where(product_id: params[:product_id])
     @admin_feature_brand_attribute = Admin::FeatureBrandAttribute.new
   end
+
+
 
   def create
     @admin_feature_brand_attribute = Admin::FeatureBrandAttribute.new(admin_feature_brand_attribute_params)

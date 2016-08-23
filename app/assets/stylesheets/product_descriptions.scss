@@ -1,30 +1,64 @@
-// Place all the styles related to the ProductDescriptions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.wrapper_show {
 
-.top-whitespace{
+  #description-heading{
+    text-align: center;
+    font-size: 130%;
+    padding: 1%;
+  }
+  .nav-products{
+    text-align: center;
+  }
 
+  #long-descript{
+    width: 100%;
+    padding:5px;
+    border-width:0.5px;
+    border-style:solid;
+    border-radius: 5px;
+  }
+  width: 70%;
+  padding: 0px;
+  margin: 0 auto;
+  font-size: 14px;
 }
+
+summary {
+  color: #666666;
+  padding: 5px;
+  font-size: 14px;
+  outline: none;
+
+  #edit-link{
+    float: right;
+  }
+}
+summary:hover {
+  color: #00cccc;
+}
+
+pre{
+  padding: 10px;
+}
+
 .nav-vertical {
   font-size: 18px;
   float: left;
-  width: 185px;
-  margin-top: 80px;
+  width: 160px;
+  margin-top: 35px;
   ul{
     margin: 0;
-    padding: 0;
-    width: 185px;
+    padding: -20px;
+    width: 160px;
     list-style-type: none;
     li{
-
       position: relative;
       padding-left: 0.4em;
+      padding-right: 1.0em;
       a{
         border-bottom: dotted 0.1px;
         text-decoration: none;
         color: #666666;
         padding: 8px 8px;
-
         display: block;
       }
       a:hover{

@@ -1,4 +1,5 @@
-<div class="top-whitespace"></div>
+<div class="top-whitespace">
+</div>
 
 <div class="nav-vertical">
   <%= render 'nav_vertical_brands' %>
@@ -6,18 +7,20 @@
 
 <div class="wrapper_show">
 
-    <div id="description-heading">
+  <div id="description-heading">
       <h3><strong><%=@products.product_name%></strong></h3>
-      <br>
-      <%= link_to "New #{@products.product_name}", "#{@products.id}/new" %>
     </div>
-    <hr>
 
-
-    <% @product_attributes.each do |attribute| %>
+  <div class="nav-products">
+       | <%= link_to "New Attributes", "/admin/product_attributes/new" %>
+       | <%= link_to "New #{@products.product_name}", "#{@products.id}/new" %>
+       | <%= link_to "New Brand", "/admin/features_brands/new" %> |
+  </div>
+  <hr>
+  <% @product_attributes.each do |attribute| %>
 
      <details>
-        <summary><%= attribute.num_view %>. <strong><%= attribute.name_attribute %></strong><i id="edit-link"><%= link_to 'Edit', "/admin/product_attributes/#{edit_admin_product_path(attribute).gsub('/admin/products/', '')}" %></i></summary>
+        <summary><%= attribute.num_view %>.<%= image_tag('g.png') %> <strong><%= attribute.name_attribute %></strong><i id="edit-link"><%= link_to 'Edit', "/admin/product_attributes/#{edit_admin_product_path(attribute).gsub('/admin/products/', '')}" %></i></summary>
        <% unless attribute.attribute_description.empty? %>
          <pre> <%= attribute.attribute_description %></pre>
        <% end %>
