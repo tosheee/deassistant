@@ -9,9 +9,9 @@
   </div>
 
   <div class="nav-products">
-    |   <%= link_to "New #{@name_brand}", "#{@brand_id}/new"%>
+    |   <%= link_to "New #{@name_brand.capitalize}", "#{@brand_id}/new"%>
     |   <%= link_to "New Brand", "/admin/features_brands/new" %>
-    |    <%= link_to "Back", "/product_descriptions/#{@product_id}" %>|
+    |    <%= link_to "Back", "/product_descriptions/#{@product_id}" %> |
   </div>
 
   <hr>

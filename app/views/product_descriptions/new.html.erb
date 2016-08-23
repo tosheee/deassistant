@@ -1,18 +1,31 @@
+<div class="top-whitespace">
+</div>
+
+<div class="nav-vertical">
+  <%= render 'nav_vertical_brands' %>
+</div>
+
+
+
 <div class="form-user">
   <%= form_for(@admin_feature_brand_attribute) do |f| %>
 
-      <div class="nav-vertical">
-        <%= render 'nav_vertical_brands' %>
-      </div>
+      <% unless @name_brand.nil? %>
+          <div class="wrapper_show">
+          <div id="description-heading">
+            <h3>New <%=Admin::Product.find(@product_id).product_name.gsub('s','') %>
+              <%= @name_brand.upcase %></h3>
 
-   <% unless @name_brand.nil? %>
-      <div>
-        <p>New <b><%= @name_brand.upcase %></b></p><%= link_to 'Back', "/product_descriptions/#{@product_id}" %>
-      </div>
+            <div class="nav-products">
+            | <%= link_to 'Back', "/product_descriptions/#{@product_id}" %> |
+            </div>
+          </div>
+
+          </div>
       <% end %>
 
       <div class="field">
-        <p><b><%=Admin::Product.find(@product_id).product_name %></b></p>
+        <p><b></b></p>
         <%= f.hidden_field(:product_id,  required: true, value: @product_id) %>
       </div>
 
