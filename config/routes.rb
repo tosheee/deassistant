@@ -31,5 +31,6 @@ Rails.application.routes.draw do
       get 'product_descriptions/:product_id/:name_brand/:brand_id', action: :show
       get 'product_descriptions/:product_id/new', action: :new
       get 'product_descriptions/:product_id/:name_brand/:brand_id/new', action: :new
+      get 'product_descriptions/:product_id/new_brand', action: :new_brand
   end
 end

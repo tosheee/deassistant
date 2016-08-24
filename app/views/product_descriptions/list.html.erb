@@ -14,7 +14,7 @@
   <div class="nav-products">
        | <%= link_to "New Attributes", "/admin/product_attributes/new" %>
        | <%= link_to "New #{@products.product_name}", "#{@products.id}/new" %>
-       | <%= link_to "New Brand", "/admin/features_brands/new" %> |
+       | <%= link_to "New Brand", "#{@products.id}/new_brand" %> |
   </div>
   <hr>
   <% @product_attributes.each do |attribute| %>

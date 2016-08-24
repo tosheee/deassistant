@@ -1,0 +1,46 @@
+<div class="form-user">
+
+  <div class="wrapper_show">
+    <div id="description-heading">
+      <h4>New <%=Admin::Product.find(@product_id).product_name.gsub('s','') %> Brand</h4>
+   </div>
+
+    <div class="nav-products">
+      | <%= link_to 'Back', "/product_descriptions/#{@product_id}" %> |
+    </div>
+  </div>
+
+  <%= form_for(@admin_feature_brand) do |f| %>
+    <% if @admin_feature_brand.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@admin_feature_brand.errors.count, "error") %> prohibited this admin_features_brand from being saved:</h2>
+
+          <ul>
+            <% @admin_features_brand.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.hidden_field(:product_id,  required: true, value: @product_id) %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :brand, class: 'form-control', placeholder: 'Enter Brand' %>
+    </div>
+    <br>
+
+    <div class="field">
+      <%= f.text_area :description, class: 'form-control', placeholder: 'Enter brand description' %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit 'Save', class: 'btn btn-default navbar-btn'%>
+    </div>
+
+<% end %>
+
+  <%= link_to 'Back', admin_features_brands_path %>
+</div>

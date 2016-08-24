@@ -25,15 +25,10 @@ class Admin::FeaturesBrandsController < ApplicationController
   # POST /admin/features_brands.json
   def create
     @admin_features_brand = Admin::FeaturesBrand.new(admin_features_brand_params)
-
-    respond_to do |format|
-      if @admin_features_brand.save
-        format.html { redirect_to @admin_features_brand, notice: 'Features brand was successfully created.' }
-        format.json { render :show, status: :created, location: @admin_features_brand }
-      else
-        format.html { render :new }
-        format.json { render json: @admin_features_brand.errors, status: :unprocessable_entity }
-      end
+    if @admin_features_brand.save
+      redirect_to :back
+    else
+      render :new
     end
   end
 
