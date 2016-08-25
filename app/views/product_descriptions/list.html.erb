@@ -12,7 +12,7 @@
     </div>
 
   <div class="nav-products">
-       | <%= link_to "New Attributes", "/admin/product_attributes/new" %>
+       | <%= link_to "New Attributes", "#{@products.id}/new_attributes" %>
        | <%= link_to "New #{@products.product_name}", "#{@products.id}/new" %>
        | <%= link_to "New Brand", "#{@products.id}/new_brand" %> |
   </div>

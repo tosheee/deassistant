@@ -23,7 +23,7 @@ class Admin::ProductAttributesController < ApplicationController
   def create
     @admin_product_attribute = Admin::ProductAttribute.new(admin_product_attribute_params)
       if @admin_product_attribute.save
-        redirect_to action: :index
+        redirect_to :back
       else
         render action: :new
     end

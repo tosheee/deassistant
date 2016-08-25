@@ -1,0 +1,46 @@
+<div class="form-user">
+  <div class="wrapper_show">
+    <div id="description-heading">
+      <h4>New <%=Admin::Product.find(@product_id).product_name.gsub('s','') %> Attribute</h4>
+    </div>
+
+    <div class="nav-products">
+      | <%= link_to 'Back', "/product_descriptions/#{@product_id}" %> |
+    </div>
+  </div>
+
+  <%= form_for(@admin_product_attribute) do |f| %>
+      <% if @admin_product_attribute.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@admin_product_attribute.errors.count, "error") %> prohibited this admin_product_attribute from being saved:</h2>
+            <ul>
+              <% @admin_product_attribute.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <div class="">
+        <%= f.hidden_field(:product_id,  required: true, value: @product_id) %>
+      </div>
+      <br>
+      <div class="field">
+        <%= f.number_field :num_view, class: 'form-control', placeholder: 'Enter Number View' %>
+      </div>
+      <br>
+      <div class="field">
+        <%= f.text_field :name_attribute, class: 'form-control', placeholder: 'Enter name attribute' %>
+      </div>
+      <br>
+      <div class="field">
+        <%= f.text_area :attribute_description, class: 'form-control', placeholder: 'Enter Description'%>
+      </div>
+      <br>
+      <div class="actions">
+        <%= f.submit 'Save', class: 'btn btn-default navbar-btn' %>
+      </div>
+  <% end %>
+
+  <%= link_to 'Back', admin_feature_brand_attributes_path %>
+</div>

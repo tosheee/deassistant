@@ -25,15 +25,6 @@ class ProductDescriptionsController < ApplicationController
     @admin_feature_brand_attribute = Admin::FeatureBrandAttribute.new
   end
 
-  def create
-    @admin_feature_brand_attribute = Admin::FeatureBrandAttribute.new(admin_feature_brand_attribute_params)
-    if @admin_feature_brand_attribute.save
-      render :show
-    else
-      render :new
-    end
-  end
-
   def new_brand
     #render text: "hello"
     @product_id = params[:product_id]
@@ -43,6 +34,22 @@ class ProductDescriptionsController < ApplicationController
     @brands_product = Admin::FeaturesBrand.where(product_id: params[:product_id])
     @admin_feature_brand = Admin::FeaturesBrand.new
   end
+
+  def new_attributes
+    @product_id = params[:product_id]
+    @admin_product_attribute = Admin::ProductAttribute.new
+  end
+
+  def create
+    @admin_feature_brand_attribute = Admin::FeatureBrandAttribute.new(admin_feature_brand_attribute_params)
+    if @admin_feature_brand_attribute.save
+      render :show
+    else
+      render :new
+    end
+  end
+
+
 
   private
   def set_admin_feature_brand_attribute
