@@ -11,7 +11,15 @@
 @import "form";
 
 body {
-
+  background-color: #eeeeee;
+  #img-bg{
+    opacity: .30;
+  }
+  #de-logo{
+    padding-top: 5px;
+    width: 40px;
+    height: 40px;
+  }
   .wrapper {
     .navbar.navbar-inverse {
       border-radius: 0;
