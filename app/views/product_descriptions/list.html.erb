@@ -21,8 +21,36 @@
 
      <details>
         <summary><% attribute.num_view %><%= image_tag('notes_img.png') %> <strong><%= attribute.name_attribute %></strong><i id="edit-link"><%= link_to 'Edit', "/admin/product_attributes/#{edit_admin_product_path(attribute).gsub('/admin/products/', '')}" %></i></summary>
+
        <% unless attribute.attribute_description.empty? %>
-         <pre> <%= attribute.attribute_description %></pre>
+
+           <% list_elements = attribute.attribute_description.scan(/(?<=<li>).*(?=<\/li>)/) %>
+           <% text_element = attribute.attribute_description.scan(/(?<=<p>).*(?=<\/p>)/) %>
+           <% example_element = attribute.attribute_description.scan(/(?<=<a>).*(?=<\/a>)/) %>
+           <% case %>
+           <% when attribute.attribute_description[/<li>/] && attribute.attribute_description[/<p>/] && attribute.attribute_description[/<a>/] %>
+               <ul class="product-descrption-content">
+               <% list_elements.each.with_index do |li, i|  %>
+
+                     <li><b><%= li %></b></li>
+                     <p class="text-descript"><%= text_element[i]%><p>
+                     <a target="_blank" href="<%= example_element[i] %>" ><%= example_element[i] %></a>
+
+               <% end %>
+               </ul>
+           <% when attribute.attribute_description[/<p>/] || attribute.attribute_description[/<a>/] %>
+               <% text_element.each.with_index do | text, i|  %>
+
+                     <p class="text-descript" ><%= text %><p>
+                     <a target="_blank" href="<%= example_element[i] %>" ><%= example_element[i] %></a>
+
+               <% end %>
+           <% else %>
+                   <%= attribute.attribute_description %>
+           <% end %>
+
+
+
        <% end %>
      </details>
      <hr>

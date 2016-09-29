@@ -1,9 +1,11 @@
-.form-user {
+.form-user{
   margin: 0 auto;
   padding: 20px;
-  width: 400px;
+  width: 500px;
   border-radius: 10px;
-
+  input{
+  width: 500px;
+  }
 }
 
 select{
@@ -18,7 +20,3 @@ select{
   -webkit-appearance: none;
 }
 
-textarea{
-  width: 360px;
-  height: 70px;
-}
