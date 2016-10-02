@@ -31,7 +31,10 @@ class Admin::ProductAttributesController < ApplicationController
 
   def update
       if @admin_product_attribute.update(admin_product_attribute_params)
-        redirect_to action: :index
+        #render text: admin_product_attribute_params.inspect
+        @product_id = admin_product_attribute_params[:product_id]
+        #render '/'
+        redirect_to  "/product_descriptions/#{@product_id}"
       else
       render action: :edit
       end

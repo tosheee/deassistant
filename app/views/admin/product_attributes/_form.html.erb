@@ -1,4 +1,22 @@
-<%= form_for(@admin_product_attribute) do |f| %>
+<script>
+    var textArea = []
+    textArea.push(document.forms[0].getElementsByClassName('styled')[0].value);
+    function input_li(){
+        textArea.push("<li></li>");
+        document.forms[0].getElementsByClassName('styled')[0].value = textArea.toString();
+    }
+    function input_p(){
+        textArea.push("<p></p>");
+        document.forms[0].getElementsByClassName('styled')[0].value = textArea.toString();
+    }
+    function input_a(){
+        textArea.push("<a></a>");
+        document.forms[0].getElementsByClassName('styled')[0].value = textArea.toString();
+    }
+</script>
+
+
+<%= form_for(@admin_product_attribute)  do |f| %>
   <% if @admin_product_attribute.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@admin_product_attribute.errors.count, "error") %> prohibited this admin_product_attribute from being saved:</h2>
@@ -11,23 +29,28 @@
     </div>
   <% end %>
 
-  <div class="">
-    <%= f.collection_select(:product_id, Admin::Product.all, :id, :product_name, :prompt => "Select Product")  %>
+
+
+  <div class = "button-attr">
+    <%= f.collection_select(:product_id, Admin::Product.all, :id, :product_name, :prompt => "Select Product", class:'select-pr-attr')  %>
   </div>
-    <br>
-    <div class="field">
-      <%= f.number_field :num_view, class: 'form-control', placeholder: 'Enter Number View' %>
+
+  <br>
+
+    <p>Mоля използвайте html таговете:&lt;li&gt;attribute&lt;/li&gt;, &lt;p&gt;text&lt;/p&gt; &lt;a&gt;link&lt;/a&gt;</p>
+
+    <div>
+      <%= f.text_field :num_view, class: 'pr-attr-text-f', placeholder: 'Enter Number View' %>
+      <%= f.text_field :name_attribute, class: 'pr-attr-text-f', placeholder: 'Enter name attribute' %>
+      <input onclick='input_li()' type='button' value='<li>Attribute</li>' id='button'>
+      <input onclick='input_p()' type='button' value='<p>Text</p>' id='button'>
+      <input onclick='input_a()' type='button' value='<a>link</a>' id='button'>
     </div>
-    <br>
-  <div class="field">
-    <%= f.text_field :name_attribute, class: 'form-control', placeholder: 'Enter name attribute' %>
-  </div>
-    <br>
-    <p>Когато въвеждате моля използвайте html таговете:&lt;li&gt;attribute&lt;/li&gt;, &lt;p&gt;text&lt;/p&gt; &lt;a&gt;link&lt;/a&gt;</p>
-  <div class="attr-descrpt-area">
-    <%= f.text_area :attribute_description, class: 'attr-descrpt-area', placeholder: 'Enter Description'%>
-  </div>
-    <br>
+
+
+    <%= f.text_area :attribute_description, class: 'styled', placeholder: 'Enter Description'%>
+
+
   <div class="actions">
     <%= f.submit 'Save', class: 'btn btn-default navbar-btn' %>
   </div>
