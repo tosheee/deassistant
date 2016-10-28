@@ -1,3 +1,10 @@
+<style>/* LIST #5 */
+#list5 { color:#eee; }
+#list5 ol { font-size:18px; }
+#list5 ol li { }
+#list5 ol li ol { list-style-image: url("../images/nested.png"); padding:5px 0 5px 18px; font-size:15px; }
+#list5 ol li ol li { color:#bfe1f1; height:15px; margin-left:10px; }</style>
+
 <div class="top-whitespace">
 </div>
 
@@ -24,64 +31,27 @@
 
        <% unless attribute.attribute_description.empty? %>
 
-           <% list_elements = attribute.attribute_description.scan(/(?<=<li>).*(?=<\/li>)/) %>
-           <% text_element = attribute.attribute_description.scan(/(?<=<p>).*(?=<\/p>)/) %>
-           <% example_element = attribute.attribute_description.scan(/(?<=<a>).*(?=<\/a>)/) %>
+           <% attribute.attribute_description.split(/<\/li>|<\/a>|<\/p>/).each do |text_attr| %>
+             <% case %>
+                   <% when text_attr[/<li>/]%>
+                       <div style="font-weight: bold; background-color: black; color: white; padding-left: 30px;  padding: 5px;">
+                         <li><%= text_attr.gsub(/<.*>/,'') %></li>
+                       </div>
 
+                   <% when text_attr[/<p>/] %>
+                       <div style="background-color: white; padding: 5px; ">
+                         <p class="text-descript"><%= text_attr.gsub(/<.*>/,'')%></p>
+                       </div>
 
-           <% case %>
-           <% when attribute.attribute_description[/<li>/] && attribute.attribute_description[/<p>/] && attribute.attribute_description[/<a>/] %>
-               <ul class="product-descrption-content">
-               <% list_elements.each.with_index do |li, i|  %>
+                   <% when text_attr[/<a>/]%>
+                       <div style="background-color: black; padding: 5px;">
+                         <a target="_blank" href="<%= text_attr.gsub(/<.*>/,'') %>" ><%= text_attr.gsub(/<.*>/,'') %></a>
+                       </div>
 
-                     <li><b><%= li %></b></li>
-                     <p class="text-descript"><%= text_element[i]%><p>
-                     <a target="_blank" href="<%= example_element[i] %>" ><%= example_element[i] %></a>
-
-               <% end %>
-               </ul>
-
-
-           <% when attribute.attribute_description[/<li>/] && attribute.attribute_description[/<p>/] %>
-               <% list_elements.each.with_index do | li, i|  %>
-                   <li><b><%= li %></b></li>
-                   <p class="text-descript"><%= text_element[i]%><p>
-               <% end %>
-
-           <% when attribute.attribute_description[/<li>/] && attribute.attribute_description[/<a>/] %>
-               <% list_elements.each.with_index do | li, i|  %>
-                   <li><b><%= li %></b></li>
-                   <a target="_blank" href="<%= example_element[i] %>" ><%= example_element[i] %></a>
-               <% end %>
-
-           <% when attribute.attribute_description[/<p>/] && attribute.attribute_description[/<a>/] %>
-               <% text_element.each.with_index do | text, i|  %>
-
-                     <p class="text-descript" ><%= text %><p>
-                     <a target="_blank" href="<%= example_element[i] %>" ><%= example_element[i] %></a>
-
-               <% end %>
-
-           <% when attribute.attribute_description[/<li>/] %>
-               <% list_elements.each.with_index do | li, i|  %>
-                   <li><b><%= li %></b></li>
-               <% end %>
-
-           <% when attribute.attribute_description[/<p>/] %>
-               <% text_elements.each.with_index do | text, i|  %>
-                   <p class="text-descript" ><%= text %><p>
-               <% end %>
-
-           <% when attribute.attribute_description[/<a>/] %>
-               <% example_element.each.with_index do | link, i|  %>
-                   <a target="_blank" href="<%= example_element[i] %>" ><%= example_element[i] %></a>
-           <% end %>
-
-           <% else %>
-                   <pre><%= attribute.attribute_description %></pre>
-           <% end %>
-
-
+                   <% else %>
+                        <%= text_attr %>
+            <% end %>
+          <% end %>
 
        <% end %>
      </details>
