@@ -1,8 +1,3 @@
-<style>
-
-
-</style>
-
 <div class="top-whitespace">
 </div>
 
@@ -31,27 +26,24 @@
 
            <% attribute.attribute_description.split(/<\/li>|<\/a>|<\/p>/).each do |text_attr| %>
              <% case %>
-                   <% when text_attr[/<li>/]%>
+                <% when text_attr[/<li>/]%>
                   <div class="list-pd">
-                   <ul class="rectangle-list">
-                     <li><%= text_attr.gsub(/(,)?<.*>/,'') %></li>
-                   </ul>
+                       <ul class="rectangle-list">
+                         <li><%= text_attr.gsub(/(,)?<.*>/,'') %></li>
+                       </ul>
                   </div>
-                   <% when text_attr[/<p>/] %>
-                       <div class="text-pd">
-                         <p class="text-descript"><%= text_attr.gsub(/(,)?<.*>/,'')%></p>
-                       </div>
-
-                   <% when text_attr[/<a>/]%>
-                       <div class="link-pd">
-                         <a target="_blank" href="<%= text_attr.gsub(/(,)?<.*>/,'') %>" ><%= text_attr.gsub(/<.*>/,'') %></a>
-                       </div>
-
-                   <% else %>
-                        <%= text_attr %>
+                <% when text_attr[/<p>/] %>
+                   <div class="text-pd">
+                     <p class="text-descript"><%= text_attr.gsub(/(,)?<.*>/,'')%></p>
+                   </div>
+                <% when text_attr[/<a>/]%>
+                    <div class="link-pd">
+                      <a target="_blank" href="<%= text_attr.gsub(/(,)?<.*>/,'') %>" ><%= text_attr.gsub(/<.*>/,'') %></a>
+                    </div>
+                <% else %>
+                    <%= text_attr %>
             <% end %>
           <% end %>
-
        <% end %>
      </details>
      <hr>
