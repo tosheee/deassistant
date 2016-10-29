@@ -1,9 +1,7 @@
-<style>/* LIST #5 */
-#list5 { color:#eee; }
-#list5 ol { font-size:18px; }
-#list5 ol li { }
-#list5 ol li ol { list-style-image: url("../images/nested.png"); padding:5px 0 5px 18px; font-size:15px; }
-#list5 ol li ol li { color:#bfe1f1; height:15px; margin-left:10px; }</style>
+<style>
+
+
+</style>
 
 <div class="top-whitespace">
 </div>
@@ -34,22 +32,23 @@
            <% attribute.attribute_description.split(/<\/li>|<\/a>|<\/p>/).each do |text_attr| %>
              <% case %>
                    <% when text_attr[/<li>/]%>
-                       <div style="font-weight: bold; background-color: black; color: white; padding-left: 30px;  padding: 5px;">
-                         <li><%= text_attr.gsub(/<.*>/,'') %></li>
-                       </div>
-
+                  <div class="list-pd">
+                   <ul class="rectangle-list">
+                     <li><%= text_attr.gsub(/(,)?<.*>/,'') %></li>
+                   </ul>
+                  </div>
                    <% when text_attr[/<p>/] %>
-                       <div style="background-color: white; padding: 5px; ">
-                         <p class="text-descript"><%= text_attr.gsub(/<.*>/,'')%></p>
+                       <div class="text-pd">
+                         <p class="text-descript"><%= text_attr.gsub(/(,)?<.*>/,'')%></p>
                        </div>
 
                    <% when text_attr[/<a>/]%>
-                       <div style="background-color: #555555; padding: 5px;">
-                         <a target="_blank" href="<%= text_attr.gsub(/<.*>/,'') %>" ><%= text_attr.gsub(/<.*>/,'') %></a>
+                       <div class="link-pd">
+                         <a target="_blank" href="<%= text_attr.gsub(/(,)?<.*>/,'') %>" ><%= text_attr.gsub(/<.*>/,'') %></a>
                        </div>
 
                    <% else %>
-                        <pre><%= text_attr %></pre>
+                        <%= text_attr %>
             <% end %>
           <% end %>
 
