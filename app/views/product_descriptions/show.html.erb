@@ -41,8 +41,8 @@
       <td title="<%= f_brand_attr.seria_description %>"><%= f_brand_attr.seria %></td>
       <td title="<%= f_brand_attr.model_description %>" class="auto-copy-colum" onclick="copyAutoText(this)"><%= f_brand_attr.model %></td>
       <td><%= f_brand_attr.aliases %></td>
-      <td><%= f_brand_attr.ean %></td>
-      <td><%= f_brand_attr.pn %></td>
+      <td class="auto-copy-colum" onclick="copyAutoText(this)"><%= f_brand_attr.ean %></td>
+      <td class="auto-copy-colum" onclick="copyAutoText(this)"><%= f_brand_attr.pn %></td>
       <td><a href= "<%= f_brand_attr.example%>" target="_blank"> <%= "Example"  %></a></td>
       <td><%= link_to 'Edit',  "/admin/feature_brand_attributes/#{edit_admin_product_path(f_brand_attr).gsub('/admin/products/', '')}" %></td>
       <td><%= link_to 'Destroy', f_brand_attr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
