@@ -1,0 +1,35 @@
+<%= form_for(@features_country) do |f| %>
+  <% if @features_country.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@features_country.errors.count, "error") %> prohibited this features_country from being saved:</h2>
+
+      <ul>
+      <% @features_country.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="">
+    <%= f.text_field :name, class: 'pr-attr-text-f',  placeholder: 'Enter Description' %>
+    <%= f.text_field :example, class: 'pr-attr-text-f',  placeholder: 'Enter Example' %>
+    <%= f.text_field :img, class: 'pr-attr-text-f',  placeholder: 'Enter Img' %>
+  </div>
+
+    <br>
+
+    <div>
+        <input onclick='input_li()' type='button' value='<li>Attribute</li>' id='button'>
+        <input onclick='input_p()' type='button' value='<p>Text</p>' id='button'>
+        <input onclick='input_a()' type='button' value='<a>link</a>' id='button'>
+    </div>
+
+    <div class="area-style">
+      <%= f.text_area :featrure, class: 'styled', placeholder: 'Enter Description' %>
+    </div>
+
+  <div class="actions">
+    <%= f.submit 'Save', class: 'btn btn-default navbar-btn' %>
+  </div>
+<% end %>

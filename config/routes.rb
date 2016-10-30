@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :features_countries
   namespace :admin do
     resources :feature_brand_attributes
   end

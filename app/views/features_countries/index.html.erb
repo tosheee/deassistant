@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Features Countries</h1>
+
+<div class="wrapper_show">
+<%= link_to 'New Features country', new_features_country_path %>
+<hr>
+
+    <% @features_countries.each do |features_country| %>
+
+      <details>
+        <summary>
+          <%= image_tag('notes_img.png') %>
+          <strong><%= features_country.name %></strong>
+          <i id="edit-link">
+          <%= link_to 'Show', features_country %>
+          <%= link_to 'Edit', edit_features_country_path(features_country) %>
+          <%= link_to 'Destroy', features_country, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </i>
+        </summary>
+        <% features_country.featrure.split(/<\/li>|<\/a>|<\/p>/).each do |text_attr| %>
+            <% case %>
+        <% when text_attr[/<li>/]%>
+                <div class="list-pd">
+                  <ul class="rectangle-list">
+                    <li><%= text_attr.gsub(/(,)?<.*>/,'') %></li>
+                  </ul>
+                </div>
+            <% when text_attr[/<p>/] %>
+                <div class="text-pd">
+                  <p class="text-descript"><%= text_attr.gsub(/(,)?<.*>/,'')%></p>
+                </div>
+            <% when text_attr[/<a>/]%>
+                <div class="link-pd">
+                  <a target="_blank" href="<%= text_attr.gsub(/(,)?<.*>/,'') %>" ><%= text_attr.gsub(/<.*>/,'') %></a>
+                </div>
+            <% else %>
+                <%= text_attr %>
+            <% end %>
+           <% end  %>
+
+        <%= features_country.example %>
+        <%= features_country.img %>
+
+      </details>
+    <hr>
+    <% end %>
+
+    </div>

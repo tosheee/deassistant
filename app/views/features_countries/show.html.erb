@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @features_country.name %>
+</p>
+
+<p>
+  <strong>Featrure:</strong>
+  <%= @features_country.featrure %>
+</p>
+
+<p>
+  <strong>Example:</strong>
+  <%= @features_country.example %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @features_country.img %>
+</p>
+
+<%= link_to 'Edit', edit_features_country_path(@features_country) %> |
+<%= link_to 'Back', features_countries_path %>
