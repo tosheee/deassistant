@@ -46,3 +46,18 @@ function input_a(){
         document.forms[0].getElementsByClassName('styled')[0].value = textArea.toString();
     }
 }
+function copyAutoText(elem){
+    var node_value = elem;
+    var range = document.createRange();
+    range.selectNode(node_value);
+    window.getSelection().addRange(range);
+    try{
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copy text ' + msg);
+    }
+    catch(err){
+        console.log('Oops, unable to copy');
+    }
+    window.getSelection().removeAllRanges();
+}

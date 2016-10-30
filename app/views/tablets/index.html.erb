@@ -14,15 +14,15 @@
       <%= submit_tag "Search" %>
   <% end %>
 </div>
-
-
-
-
 <div class="table-form">
-<% unless notice.nil? %>
+
+  <div>
+    <p>Колоната в зелено има автоматично копиране, кликнете върху стойността.</p>
+  </div>
+
+  <% unless notice.nil? %>
   <p id="notice"><%= notice %></p>
 <% end %>
-    <br>
 
     <table>
   <thead>
@@ -51,7 +51,7 @@
         <td><%= tablet.storage %></td>
         <td><%= tablet.color %></td>
         <td><%= tablet.aen %></td>
-        <td><%= tablet.partnumber %></td>
+        <td class="auto-copy-colum" onclick="copyAutoText(this)"><%= tablet.partnumber %></td>
         <td><%= link_to 'Show', tablet %></td>
         <td><%= link_to 'Edit', edit_tablet_path(tablet) %></td>
         <td><%= link_to 'Destroy', tablet, method: :delete, data: { confirm: 'Are you sure?' } %></td>

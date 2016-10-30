@@ -12,11 +12,15 @@
     | <%= link_to "New #{@name_brand.capitalize}", "#{@brand_id}/new"%>
     | <%= link_to "New Brand", "/product_descriptions/#{@product_id}/new_brand" %>
     | <%= link_to "Back", "/product_descriptions/#{@product_id}" %> |
+    <div>
+      <p>Колоната в зелено има автоматично копиране, кликнете върху стойността.</p>
+    </div>
   </div>
 
   <hr>
 
   <table id="keywords" class="feature_attribute" cellspacing="0" cellpadding="0">
+
   <thead>
   <tr>
   <th>Brand</th>
@@ -35,7 +39,7 @@
   <tr>
     <td class="lalign"><%=Admin::FeaturesBrand.find(f_brand_attr.features_brands_id).brand %></td>
       <td title="<%= f_brand_attr.seria_description %>"><%= f_brand_attr.seria %></td>
-      <td title="<%= f_brand_attr.model_description %>"><%= f_brand_attr.model %></td>
+      <td title="<%= f_brand_attr.model_description %>" class="auto-copy-colum" onclick="copyAutoText(this)"><%= f_brand_attr.model %></td>
       <td><%= f_brand_attr.aliases %></td>
       <td><%= f_brand_attr.ean %></td>
       <td><%= f_brand_attr.pn %></td>
