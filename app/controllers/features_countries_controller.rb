@@ -18,7 +18,7 @@ class FeaturesCountriesController < ApplicationController
   def create
     @features_country = FeaturesCountry.new(features_country_params)
       if @features_country.save
-        render :show
+        render :index
       else
         render :new
       end
